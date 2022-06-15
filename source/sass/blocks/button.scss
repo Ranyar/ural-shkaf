@@ -1,0 +1,26 @@
+.button {
+  @include font(Gilroy, Medium, 500, normal, 18px, 47px, $basic-white );
+  letter-spacing: -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid $basic-white;
+  cursor: pointer;
+}
+
+.button--callback {
+  height: 51px;
+  min-width: 200px;
+  margin-left: 67px;
+}
+
+.button--callback:hover,
+.button--callback:focus {
+  background-color: $basic-white;
+  color: $basic-black;
+}
+
+.button--callback:active {
+  opacity: 0.7;
+}

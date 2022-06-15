@@ -1,0 +1,16 @@
+.page-header {
+  background-image: url('../../img/bg1.jpg');
+  background-size: cover;
+  min-height: 1080px;
+}
+
+.page-header__wrapper-top {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba($basic-white, 0.2);
+}
+
+.page-header__container {
+  max-width: 1250px;
+  margin: 0 auto;
+}

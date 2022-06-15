@@ -1,0 +1,18 @@
+// ----- General styles
+@import "normalize.scss";
+@import "variables.scss";
+@import "global.scss";
+@import "fonts.scss";
+//@import "blocks/page-body.scss";
+
+// ----- Header
+@import "blocks/page-header.scss";
+@import "blocks/top-info.scss";
+@import "blocks/main-nav.scss";
+
+// ----- Other
+@import "blocks/button.scss";
+//@import "blocks/modal.scss";
+
+// ----- Bundle
+@import "vendor/swiper-bundle.scss";
