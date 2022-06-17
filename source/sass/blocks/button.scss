@@ -1,5 +1,5 @@
 .button {
-  @include font(Gilroy, Medium, 500, normal, 18px, 47px, $basic-white );
+  @include font(Gilroy, 500, normal, 18px, 47px, $basic-white );
   letter-spacing: -1px;
   display: flex;
   justify-content: center;
@@ -22,5 +22,20 @@
 }
 
 .button--callback:active {
+  opacity: 0.7;
+}
+
+.button--yellow {
+  background: linear-gradient(90deg, #fbf0c6 0%, #f6e395 100%);
+  color: $basic-black;
+  border: none;
+}
+
+.button--yellow:hover,
+.button--yellow:focus {
+  background: $button-yellow-hover;
+}
+
+.button--yellow:active {
   opacity: 0.7;
 }

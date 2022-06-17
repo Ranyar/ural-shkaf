@@ -13,7 +13,7 @@
 }
 
 .top-info__logo-description {
-  @include font(Gilroy, Medium, 500, normal, 14px, normal, $basic-white );
+  @include font(Gilroy, 500, normal, 14px, normal, $basic-white );
   max-width: 222px;
   margin: 0;
   padding-top: 8px;
@@ -24,7 +24,7 @@
 }
 
 .top-info__ask-us {
-  @include font(Gilroy, Medium, 500, normal, 14px, normal, $basic-white );
+  @include font(Gilroy, 500, normal, 14px, normal, $basic-white );
   margin: 0;
   padding-top: 7px;
   max-width: 105px;
@@ -35,20 +35,20 @@
 }
 
 .top-info__phone-block {
-  @include font(Gilroy, Medium, 500, normal, 14px, normal, $basic-white );
+  @include font(Gilroy, 500, normal, 14px, normal, $basic-white );
   display: flex;
   flex-direction: column;
   margin-left: 14px;
 }
 
 .top-info__phone-block span:first-child {
-  @include font(Gilroy, Medium, 500, normal, 24px, normal, $basic-white );
+  @include font(Gilroy, 500, normal, 24px, normal, $basic-white );
   letter-spacing: -1px;
   padding-top: 4px;
   margin-bottom: 2px;
 }
 
 .top-info__phone-block span:last-child {
-  @include font(Gilroy, Medium, 500, normal, 11px, normal, $basic-white );
+  @include font(Gilroy, 500, normal, 11px, normal, $basic-white );
   padding-left: 8px;
 }

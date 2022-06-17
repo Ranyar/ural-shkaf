@@ -15,7 +15,7 @@
 }
 
 .main-nav__item a {
-  @include font(Gilroy, Medium, 500, normal, 18px, 47px, $basic-white );
+  @include font(Gilroy, 500, normal, 18px, 47px, $basic-white );
   margin-right: 27px;
   position: relative;
 }
