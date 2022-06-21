@@ -100,7 +100,7 @@
   @include font(Gilroy, 500, normal, 16px, 34px, $scroll-down );
   position: absolute;
   content: '';
-  bottom: 414px;
+  bottom: 426px;
   left: -195px;
   letter-spacing: -0.02em;
   transform: rotate(-90deg);
@@ -120,7 +120,7 @@
 .promo__about {
   @include font(Gilroy, 500, normal, 48px, normal, $basic-white );
   letter-spacing: -1px;
-  margin: 0;
+  margin: 0 0 12px 0;
   max-width: 1000px;
 
   & span {
