@@ -1,0 +1,43 @@
+.cupboards-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.cupboards-list__item {
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url("./../img/cupboards-list-bg.png");
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.cupboards-list__image {
+  opacity: 0.5;
+}
+
+.cupboards-list__item:hover .cupboards-list__image,
+.cupboards-list__item:focus .cupboards-list__image {
+  opacity: 1;
+}
+
+.cupboards-list__item:active .cupboards-list__image {
+  opacity: 0.7;
+}
+
+.cupboards-list__heading {
+  @include font(Gilroy, bold, normal, 20px, normal, $basic-white);
+  width: 160px;
+  letter-spacing: 0;
+  position: absolute;
+  margin: 0;
+  padding-left: 36px;
+  bottom: 47px;
+  left: 0;
+}
