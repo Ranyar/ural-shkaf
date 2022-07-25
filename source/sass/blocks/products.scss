@@ -1,0 +1,88 @@
+.products {
+  max-width: 365px;
+}
+
+.products__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products__item {
+  width: 113px;
+  height: 96px;
+  border-radius: 10px;
+  background-color: #272a34;
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  display: flex;
+  align-items: end;
+  margin-right: 13px;
+
+  &:first-child {
+    width: 365px;
+    height: 620px;
+    position: relative;
+    margin-bottom: 14px;
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  span {
+    @include font(Gilroy, bold, normal, 24px, normal, $basic-white);
+    margin-bottom: 54px;
+    margin-left: 33px;
+    max-width: 149px;
+  }
+}
+
+.products--bedroom-1 {
+  .products__item:first-child {
+    background-image:url("../../img/bedroom-1.jpg");
+  }
+
+  .products__item:nth-child(2) {
+    background-image:url("../../img/bedroom-2.jpg");
+  }
+
+  .products__item:nth-child(3) {
+    background-image:url("../../img/bedroom-3.jpg");
+  }
+}
+
+.products--lounge-1 {
+  .products__item:first-child {
+    background-image:url("../../img/lounge-1-1.jpeg");
+  }
+
+  .products__item:nth-child(2) {
+    background-image:url("../../img/lounge-1-2.jpeg");
+  }
+
+  .products__item:nth-child(3) {
+    background-image:url("../../img/lounge-1-3.jpeg");
+  }
+
+  .products__item:nth-child(4) {
+    background-image:url("../../img/lounge-1-4.jpeg");
+  }
+}
+
+.products--lounge-2 {
+  .products__item:first-child {
+    background-image:url("../../img/lounge-2-1.jpg");
+  }
+
+  .products__item:nth-child(2) {
+    background-image:url("../../img/lounge-2-2.jpg");
+  }
+
+  .products__item:nth-child(3) {
+    background-image:url("../../img/lounge-2-3.jpg");
+  }
+}
