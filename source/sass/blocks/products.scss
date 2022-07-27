@@ -27,6 +27,20 @@
     position: relative;
     margin-bottom: 14px;
     margin-right: 0;
+    position: relative;
+
+    &::before {
+      @include font(Gilroy, bold, normal, 12px, normal, $basic-white);
+      position: absolute;
+      content: 'Наши работы';
+      text-transform: uppercase;
+      width: fit-content;
+      height: fit-content;
+      top: 90px;
+      left: -13px;
+      letter-spacing: 2px;
+      transform: rotate(-90deg);
+    }
   }
 
   &:last-child {
