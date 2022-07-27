@@ -1,7 +1,8 @@
 .portfolio__wrapper {
-  max-width: 1228px;
+  max-width: 1305px;
   margin: 0 auto;
-  padding: 84px 30px;
+  padding: 84px 75px;
+  position: relative;
 }
 
 .portfolio__heading {
@@ -17,3 +18,28 @@
   padding: 0;
   margin: 0;
 }
+
+.portfolio .swiper-pagination-bullet-active {
+  background: $basic-black;
+}
+
+.portfolio .swiper-button-next,
+.portfolio .swiper-button-prev {
+  color: $basic-black;
+  opacity: 0.5;
+}
+
+.portfolio .swiper-button-next:hover,
+.portfolio .swiper-button-prev:hover,
+.portfolio .swiper-button-next:focus,
+.portfolio .swiper-button-prev:focus {
+  color: $basic-accent;
+  opacity: 1;
+}
+
+.portfolio .swiper-button-next:active,
+.portfolio .swiper-button-prev:active{
+  color: $basic-accent;
+  opacity: 0.7;
+}
+
