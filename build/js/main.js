@@ -1,7 +1,7 @@
 `use strict`;
 // ----- Слайдер
 
-const swiper = new Swiper(`.swiper`, {
+const swiper = new Swiper(`.swiper--portfolio`, {
   loop: true,
   slidesPerGroup: 3,
   slidesPerView: 3,
@@ -10,12 +10,12 @@ const swiper = new Swiper(`.swiper`, {
   centeredSlidesBounds: true,
 
   pagination: {
-    el: '.swiper-pagination',
+    el: `.swiper-pagination--portfolio`,
   },
 
   navigation: {
-    nextEl: `.swiper-button-next`,
-    prevEl: `.swiper-button-prev`
+    nextEl: `.swiper-button-next--portfolio`,
+    prevEl: `.swiper-button-prev--portfolio`
   },
 
   breakpoints: {
@@ -30,6 +30,39 @@ const swiper = new Swiper(`.swiper`, {
     1024: {
       slidesPerView: 3,
       slidesPerGroup: 3,
+    },
+  },
+});
+
+const swiperPartners = new Swiper(`.swiper-partners`, {
+  loop: true,
+  slidesPerGroup: 3,
+  slidesPerView: 3,
+  centeredSlides: false,
+  spaceBetween: 22,
+  centeredSlidesBounds: true,
+
+  pagination: {
+    el: `.swiper-pagination--partners`,
+  },
+
+  navigation: {
+    nextEl: `.swiper-button-next--partners`,
+    prevEl: `.swiper-button-prev--partners`
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    1024: {
+      slidesPerView: 5,
+      slidesPerGroup: 5,
     },
   },
 });

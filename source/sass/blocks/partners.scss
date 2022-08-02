@@ -1,0 +1,87 @@
+.partners {
+  margin-bottom: 400px;
+}
+
+.partners__wrapper {
+  max-width: 1305px;
+  margin: 0 auto;
+  padding: 30px 66px;
+  position: relative;
+}
+
+.partners__heading {
+  @include font(Gilroy, 500, normal, 48px, normal, $basic-black);
+  letter-spacing: -1px;
+  margin: 0 0 50px 0;
+}
+
+.partners p {
+  @include font(Gilroy, 500, normal, 24px, normal, $basic-black);
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin: 0 0 50px 0;
+}
+
+.partners__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.partners__item {
+  width: fit-content;
+  max-width: 215px;
+  border: 1px solid #c3c3c3;
+  filter: grayscale(100%) opacity(80%);
+}
+
+.partners__item:hover,
+.partners__item:focus,
+.partners__item:active {
+  filter: none;
+}
+
+.partners .swiper-pagination-bullet-active {
+  background: $basic-black;
+}
+
+.partners .swiper-buttons {
+  position: relative;
+  margin-bottom: 74px;
+}
+
+.partners .swiper-button-next,
+.partners .swiper-button-prev {
+  color: $basic-black;
+  opacity: 0.5;
+}
+
+.partners .swiper-button-prev {
+   left: -46px;
+   top: -67px;
+ }
+
+.partners .swiper-button-next {
+  right: -46px;
+  top: -67px;
+}
+
+.partners .swiper-button-next:hover,
+.partners .swiper-button-prev:hover,
+.partners .swiper-button-next:focus,
+.partners .swiper-button-prev:focus {
+  color: $basic-accent;
+  opacity: 1;
+}
+
+.partners .swiper-button-next:active,
+.partners .swiper-button-prev:active{
+  color: $basic-accent;
+  opacity: 0.7;
+}
+
+.partners .swiper-pagination {
+  top: 298px;
+}
+
