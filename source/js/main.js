@@ -116,61 +116,52 @@ const swiperPartners = new Swiper(`.swiper-partners`, {
 //
 // // ----- Аккордеон
 //
-// const accordions = document.querySelectorAll(`.accordion`);
-// const filterPoints = document.querySelectorAll(`.filter-point__input`);
-//
-// if (filterPoints.length !== 0) {
-//   for (let i = 0; i < filterPoints.length; i++) {
-//     filterPoints[i].addEventListener(`click`, (evt) => {
-//       evt.stopPropagation();
-//     });
-//   }
-// }
-//
-// const accordionItems = document.querySelectorAll(`.accordion__item`);
-// const content = document.querySelectorAll(`.accordion__content`);
-//
-// for (let i = 0; i < accordions.length; i++) {
-//   accordions[i].classList.remove(`accordion--nojs`);
-//   accordionItems[i].classList.add(`accordion__item--opened`);
-// }
-//
-// function accordionHandler(clickedIndex) {
-//   let shown = document.querySelector(`.accordion__content--show`);
-//   let opened = document.querySelector(`.accordion__item--opened`);
-//
-//   if (shown === accordionItems[clickedIndex]) {
-//     content[clickedIndex].classList.remove(`accordion__content--show`);
-//     accordionItems[clickedIndex].classList.add(`accordion__item--closed`);
-//     accordionItems[clickedIndex].classList.remove(`accordion__item--opened`);
-//   } else {
-//     content[clickedIndex].classList.add(`accordion__content--show`);
-//     accordionItems[clickedIndex].classList.remove(`accordion__item--closed`);
-//     accordionItems[clickedIndex].classList.add(`accordion__item--opened`);
-//   }
-//
-//   if (shown) {
-//     shown.classList.remove(`accordion__content--show`);
-//     opened.classList.add(`accordion__item--closed`);
-//     opened.classList.remove(`accordion__item--opened`);
-//   }
-// }
-//
-// if (accordions) {
-//   for (let i = 0; i < accordionItems.length; i++) {
-//     accordionItems[i].addEventListener(`click`, () => {
-//       accordionHandler(i);
-//     });
-//
-//     accordionItems[i].addEventListener(`keydown`, (evt) => {
-//       if (evt.keyCode === 13) {
-//         evt.preventDefault();
-//         accordionHandler(i);
-//       }
-//     });
-//   }
-// }
-//
+const accordions = document.querySelectorAll(`.accordion`);
+
+const accordionItems = document.querySelectorAll(`.accordion__item`);
+const content = document.querySelectorAll(`.accordion__content`);
+
+for (let i = 0; i < accordions.length; i++) {
+  accordions[i].classList.remove(`accordion--nojs`);
+  accordionItems[i].classList.add(`accordion__item--opened`);
+}
+
+function accordionHandler(clickedIndex) {
+  let shown = document.querySelector(`.accordion__content--show`);
+  let opened = document.querySelector(`.accordion__item--opened`);
+
+  if (shown === accordionItems[clickedIndex]) {
+    content[clickedIndex].classList.remove(`accordion__content--show`);
+    accordionItems[clickedIndex].classList.add(`accordion__item--closed`);
+    accordionItems[clickedIndex].classList.remove(`accordion__item--opened`);
+  } else {
+    content[clickedIndex].classList.add(`accordion__content--show`);
+    accordionItems[clickedIndex].classList.remove(`accordion__item--closed`);
+    accordionItems[clickedIndex].classList.add(`accordion__item--opened`);
+  }
+
+  if (shown) {
+    shown.classList.remove(`accordion__content--show`);
+    opened.classList.add(`accordion__item--closed`);
+    opened.classList.remove(`accordion__item--opened`);
+  }
+}
+
+if (accordions) {
+  for (let i = 0; i < accordionItems.length; i++) {
+    accordionItems[i].addEventListener(`click`, () => {
+      accordionHandler(i);
+    });
+
+    accordionItems[i].addEventListener(`keydown`, (evt) => {
+      if (evt.keyCode === 13) {
+        evt.preventDefault();
+        accordionHandler(i);
+      }
+    });
+  }
+}
+
 // // ----- Перехват фокуса на аккордеон на Главной
 //
 // const followerItemMain = document.querySelector(`.blog-list:last-child a`);
