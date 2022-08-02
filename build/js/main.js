@@ -117,15 +117,6 @@ const swiperPartners = new Swiper(`.swiper-partners`, {
 // // ----- Аккордеон
 //
 const accordions = document.querySelectorAll(`.accordion`);
-const filterPoints = document.querySelectorAll(`.filter-point__input`);
-
-if (filterPoints.length !== 0) {
-  for (let i = 0; i < filterPoints.length; i++) {
-    filterPoints[i].addEventListener(`click`, (evt) => {
-      evt.stopPropagation();
-    });
-  }
-}
 
 const accordionItems = document.querySelectorAll(`.accordion__item`);
 const content = document.querySelectorAll(`.accordion__content`);
