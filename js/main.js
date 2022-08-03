@@ -67,6 +67,39 @@ const swiperPartners = new Swiper(`.swiper-partners`, {
   },
 });
 
+const swiperCertificates = new Swiper(`.swiper-certificates`, {
+  loop: true,
+  slidesPerGroup: 3,
+  slidesPerView: 3,
+  centeredSlides: false,
+  spaceBetween: 40,
+  centeredSlidesBounds: true,
+
+  pagination: {
+    el: `.swiper-pagination--certificates`,
+  },
+
+  navigation: {
+    nextEl: `.swiper-button-next--certificates`,
+    prevEl: `.swiper-button-prev--certificates`
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    },
+  },
+});
+
 // // ----- Меню
 //
 // const pageBody = document.querySelector(`.page-body`);
