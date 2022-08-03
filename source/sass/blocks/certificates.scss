@@ -1,0 +1,65 @@
+.certificates__wrapper {
+  max-width: 1305px;
+  margin: 0 auto;
+  padding: 33px 66px;
+  position: relative;
+}
+
+.certificates__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certificates__item {
+  display: block;
+}
+
+.certificates__heading {
+  @include font(Gilroy, 500, normal, 48px, normal, $basic-black);
+  letter-spacing: -1px;
+  margin: 0 0 49px 0;
+}
+
+.certificates .swiper-pagination-bullet-active {
+  background: $basic-black;
+}
+
+.certificates .swiper-buttons {
+  position: relative;
+  margin-bottom: 74px;
+}
+
+.certificates .swiper-button-next,
+.certificates .swiper-button-prev {
+  color: $basic-black;
+  opacity: 0.5;
+}
+
+.certificates .swiper-button-prev {
+  left: -46px;
+  top: -190px;
+}
+
+.certificates .swiper-button-next {
+  right: -46px;
+  top: -190px;
+}
+
+.certificates .swiper-button-next:hover,
+.certificates .swiper-button-prev:hover,
+.certificates .swiper-button-next:focus,
+.certificates .swiper-button-prev:focus {
+  color: $basic-accent;
+  opacity: 1;
+}
+
+.certificates .swiper-button-next:active,
+.certificates .swiper-button-prev:active{
+  color: $basic-accent;
+  opacity: 0.7;
+}
+
+.certificates .swiper-pagination.swiper-pagination--certificates {
+  bottom: 58px;
+}
