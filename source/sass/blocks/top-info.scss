@@ -41,7 +41,7 @@
   margin-left: 14px;
 }
 
-.top-info__phone-block span:first-child {
+.top-info__phone-block .top-info__phone-number {
   @include font(Gilroy, 500, normal, 24px, normal, $basic-white );
   letter-spacing: -1px;
   padding-top: 4px;

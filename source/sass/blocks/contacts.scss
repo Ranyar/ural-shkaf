@@ -1,0 +1,91 @@
+.contacts {
+  width: 405px;
+  height: 457px;
+  background-color: $basic-white;
+  z-index: 11;
+  position: relative;
+  padding: 24px 42px 0 35px;
+}
+
+.contacts__heading {
+  @include font(Gilroy, bold, normal, 42px, normal, $basic-black);
+  letter-spacing: -1px;
+  margin: 0 0 16px 0;
+}
+
+.contacts__call-us {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+.contacts__call-us a {
+  @include font(Gilroy, bold, normal, 31px, normal, $basic-black);
+  letter-spacing: -0.02em;
+  margin: 0 0 45px 0;
+  text-align: center;
+}
+
+.contacts__email {
+  display: block;
+  @include font(Gilroy, bold, normal, 24px, normal, $basic-black);
+  letter-spacing: -0.02em;
+  padding-left: 5px;
+  margin-bottom: 22px;
+}
+
+.contacts__address {
+  @include font(Gilroy, bold, normal, 18px, normal, $basic-black);
+  letter-spacing: -0.02em;
+  padding: 0 0 0 40px;
+  margin: 0 0 39px 0;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 8px;
+    left: 5px;
+    background-image: url("../../img/pin.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contacts__address p {
+  margin: 0 0 12px 0;
+}
+
+.contacts__bottom-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contacts__details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contacts__details-item {
+  @include font(Gilroy, bold, normal, 12px, normal, $basic-black);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.contacts__social {
+  display: grid;
+  grid-template-columns: 1fr 36px;
+  padding-right: 4px;
+}
+
+.contacts__social p {
+  @include font(Gilroy, bold, normal, 12px, normal, $basic-black);
+  letter-spacing: -0.02em;
+  text-align: right;
+  margin: 0 19px 0 0;
+}
