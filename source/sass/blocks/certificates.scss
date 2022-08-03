@@ -1,7 +1,7 @@
 .certificates__wrapper {
   max-width: 1305px;
   margin: 0 auto;
-  padding: 33px 66px;
+  padding: 33px 66px 20px 66px;
   position: relative;
 }
 
@@ -27,7 +27,7 @@
 
 .certificates .swiper-buttons {
   position: relative;
-  margin-bottom: 74px;
+  margin-bottom: 50px;
 }
 
 .certificates .swiper-button-next,
@@ -61,5 +61,5 @@
 }
 
 .certificates .swiper-pagination.swiper-pagination--certificates {
-  bottom: 58px;
+  bottom: 21px;
 }
