@@ -1,4 +1,4 @@
-.page-footer {
+.page-footer__map-wrapper {
   height: 675px;
   position: relative;
 }
@@ -20,4 +20,57 @@
 .page-footer__contacts {
   justify-self: flex-start;
   align-self: end;
+}
+
+.page-footer__bottom {
+  background-color: $basic-white;
+}
+
+.page-footer__bottom-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 1228px;
+  margin: 0 auto;
+  padding: 24px 30px;
+}
+
+.page-footer__logo {
+  margin-right: auto;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.page-footer__legal {
+  display: block;
+  height: fit-content;
+  @include font(Gilroy, bold, normal, 14px, 17px, $basic-black);
+  letter-spacing: -0.02em;
+  margin: 0 37px 7px 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    color: $basic-black;
+  }
+
+  &:active {
+    opacity: 1;
+    color: $basic-accent;
+  }
+}
+
+.page-footer__scroll-to-top:hover,
+.page-footer__scroll-to-top:focus {
+  opacity: 0.7;
+}
+
+.page-footer__scroll-to-top:active {
+  opacity: 0.5;
 }
