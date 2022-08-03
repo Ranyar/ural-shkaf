@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   background-color: $callback-form-background;
   padding: 36px 0 36px 62px;
-  filter: drop-shadow(0 5px 40px rgba($cupboards-background, 0.4));
+  filter: drop-shadow(0 5px 40px rgba($dark-background, 0.4));
 }
 
 .callback-form__heading {
@@ -99,4 +99,18 @@
 .callback-form__manager-function {
   @include font(Gilroy, normal, normal, 17px, normal, $basic-black);
   letter-spacing: -0.02em;
+}
+
+//----- Form in the Trust block
+
+.callback-form--trust .callback-form__heading {
+  margin-bottom: 20px;
+}
+
+.callback-form--trust .callback-form__item {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 5px;
+  }
 }

@@ -1,0 +1,15 @@
+.trust {
+  background: linear-gradient(to top, rgba($basic-white,1) 0, rgba($basic-white,1) 120px, rgba($dark-background,1) 120px);
+}
+
+.trust__wrapper {
+  max-width: 1228px;
+  margin: 0 auto;
+  padding: 30px 30px 60px 30px;
+}
+
+.trust__heading {
+  @include font(Gilroy, 500, normal, 48px, normal, $basic-white);
+  letter-spacing: -1px;
+  margin: 0 0 38px 0;
+}
