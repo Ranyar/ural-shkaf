@@ -1,7 +1,10 @@
 <?php
 /* Здесь проверяется существование переменных */
-if (isset($_POST['name-field'])) {$name = $_POST['name-field'];}
-if (isset($_POST['phone-field'])) {$phone = $_POST['phone-field'];}
+if (isset($_POST['name'])) {$name = $_POST['name'];}
+if (isset($_POST['phone'])) {$phone = $_POST['phone'];}
+
+if (isset($_POST['name-trust'])) {$name = $_POST['name-trust'];}
+if (isset($_POST['phone-trust'])) {$phone = $_POST['phone-trust'];}
 
 /* Сюда впишите свою эл. почту */
 $myaddres  = "kuznetsov4workmail@gmail.com"; // кому отправляем
@@ -12,7 +15,7 @@ $mes = "Тема: Заказ обратного звонка!\nТелефон: $
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub='Заказ'; //сабж
 $email='Заказ обратного звонка'; // от кого
-$send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email");
+$send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:info@uralshkaf.ru");
 
 ini_set('short_open_tag', 'On');
 header('Refresh: 3; URL=index.html');

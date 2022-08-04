@@ -40,31 +40,31 @@
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="#">Что производим</a>
+              <a href="#cupboards-types">Что производим</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Материалы</a>
+              <a href="#cupboards-materials">Материалы</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Наши работы</a>
+              <a href="#portfolio">Наши работы</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Отзывы</a>
+              <a href="#reviews">Отзывы</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Партнеры</a>
+              <a href="#partners">Партнеры</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">F.A.Q</a>
+              <a href="#faq">F.A.Q</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Как мы работаем</a>
+              <a href="#how-we-work">Как мы работаем</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Сертификаты</a>
+              <a href="#certificates">Сертификаты</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Контакты</a>
+              <a href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -87,7 +87,7 @@
     </div>
   </header>
   <main class="page-main">
-    <section class="cupboards-types">
+    <section class="cupboards-types" id="cupboards-types">
       <div class="cupboards-types__wrapper">
         <h2 class="visually-hidden">Виды наших шкафов-купе на заказ</h2>
         <ul class="cupboards-types__list">
@@ -184,12 +184,12 @@
             или ящики с доводчиками
             в&nbsp;подарок</li>
         </ul>
-        <div class="cupboards-additional__callback-form callback-form">
+        <div class="cupboards-additional__callback-form callback-form" id="callback-form">
           <div class="callback-form__text">
             <h3 class="callback-form__heading"><strong>Оставьте заявку</strong> и&nbsp;вам перезвонит менеджер, который:</h3>
             <ul class="callback-form__list">
                 <li class="callback-form__item">
-                  <b>Обьяснит,</b> чем может отличаться шкаф у&nbsp;нас, от других предложений на рынке
+                  <b>Объяснит,</b> чем может отличаться шкаф у&nbsp;нас, от других предложений на рынке
                 </li>
                 <li class="callback-form__item">
                   <b>Ответит</b> на все волнующие Вас вопросы
@@ -218,7 +218,7 @@
         </div>
       </div>
     </section>
-    <section class="cupboards-materials">
+    <section class="cupboards-materials" id="cupboards-materials">
       <h2 class="cupboards-materials__heading">Вы можете сами выбрать<br> <strong>необходимый материал</strong> для шкафа:</h2>
       <ul class="cupboards-materials__list cupboards-materials__list--first cupboards-materials__container">
         <li class="cupboards-materials__item">
@@ -345,7 +345,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="portfolio__wrapper">
         <h2 class="portfolio__heading">Посмотрите наши <b>последние работы</b></h2>
         <div class="swiper swiper--portfolio">
@@ -525,7 +525,7 @@
         <div class="swiper-pagination swiper-pagination--portfolio"></div>
       </div>
     </section>
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <div class="reviews__wrapper">
         <div class="reviews__text-wrapper">
           <h2>Посмотрите <strong>отзывы наших клиентов</strong></h2>
@@ -554,7 +554,7 @@
         </ul>
       </div>
     </section>
-    <section class="partners">
+    <section class="partners" id="partners">
       <div class="partners__wrapper">
         <h2 class="partners__heading">Наши <b>партнеры:</b></h2>
         <div class="swiper swiper-partners">
@@ -599,7 +599,7 @@
         <p>Мы используем фурнитуру и составляющие только от проверенных партнеров</p>
       </div>
     </section>
-    <section class="faq">
+    <section class="faq" id="faq">
       <div class="faq__wrapper">
         <h2 class="faq__heading"><b>Ответы</b> на часто задаваемые вопросы</h2>
         <div class="faq__lists-wrapper">
@@ -700,7 +700,7 @@
         </div>
       </div>
     </section>
-    <section class="how-we-work">
+    <section class="how-we-work" id="how-we-work">
       <div class="how-we-work__wrapper">
         <h2 class="how-we-work__heading">Как мы работаем</h2>
         <ul class="how-we-work__list">
@@ -777,7 +777,7 @@
           <li class="advantages-list__item">Дизайн<br> от&nbsp;профессионального<br> проектировщика</li>
           <li class="advantages-list__item">Собственное производство<br> и&nbsp;оптовые цены на материалы</li>
         </ul>
-        <div class="cupboards-additional__callback-form callback-form callback-form--trust">
+        <div class="cupboards-additional__callback-form callback-form callback-form--trust" id="callback-form-trust">
           <div class="callback-form__text">
             <h3 class="callback-form__heading"><strong>Бесплатный</strong> вызов замерщика</h3>
             <ul class="callback-form__list">
@@ -802,9 +802,9 @@
             <form action="send.php" method="post" enctype="multipart/form-data" autocomplete="off">
               <input type="hidden" name="form" value="callback">
               <label class="visually-hidden" for="name-field">Имя</label>
-              <input class="callback-form__name-input" id="name-field-trust" type="text" name="name" placeholder="Как вас зовут?" required>
+              <input class="callback-form__name-input" id="name-field-trust" type="text" name="name-trust" placeholder="Как вас зовут?" required>
               <label class="visually-hidden" for="phone-field">Телефон</label>
-              <input class="callback-form__phone-input" id="phone-field-trust" type="tel" name="phone" placeholder="Телефон" required="">
+              <input class="callback-form__phone-input" id="phone-field-trust" type="tel" name="phone-trust" placeholder="Телефон" required="">
               <button class="button button--yellow button--callback-form" type="submit">Оставить заявку</button>
               <p class="callback-form__legal">Нажимая кнопку "Оставить заявку" вы соглашаетесь на обработку персональных данных в соответствии с ФЗ №152</p>
             </form>
@@ -817,43 +817,43 @@
         </div>
       </div>
     </section>
-    <section class="certificates">
+    <section class="certificates" id="certificates">
       <div class="certificates__wrapper">
         <h2 class="certificates__heading">Вся наша продукция <b>имеет необходимые сертификаты качества</b></h2>
         <div class="swiper swiper-certificates">
           <ul class="certificates__list swiper-wrapper">
             <li class="certificates__item swiper-slide">
-              <img src="img/cert-small/1-сert-001063.png" width="265" height="380" alt="">
+              <img src="img/cert-small/1-cert-001063.png" width="265" height="380" alt="">
             </li>
             <li class="certificates__item swiper-slide">
-              <img src="img/cert-small/2-сert-fire-dsp-ldsp-1.png" width="265" height="380" alt="">
+              <img src="img/cert-small/2-cert-fire-dsp-ldsp-1.png" width="265" height="380" alt="">
             </li>
             <li class="certificates__item swiper-slide">
-              <img src="img/cert-small/3-сert-fsc-tomlesdrev.png" width="265" height="380" alt="">
+              <img src="img/cert-small/3-cert-fsc-tomlesdrev.png" width="265" height="380" alt="">
             </li>
             <li class="certificates__item swiper-slide">
-              <img src="img/cert-small/4-сert-dsp-e1-p5-waterproof.png" width="265" height="380" alt="">
+              <img src="img/cert-small/4-cert-dsp-e1-p5-waterproof.png" width="265" height="380" alt="">
             </li>
             <li class="certificates__item swiper-slide">
-              <img src="img/cert-small/5-сert-2017.png" width="265" height="380" alt="">
+              <img src="img/cert-small/5-cert-2017.png" width="265" height="380" alt="">
             </li>
             <li class="certificates__item swiper-slide">
-              <img src="img/cert-small/6-сert-fire-dsp-ldsp-2.png" width="265" height="380" alt="">
+              <img src="img/cert-small/6-cert-fire-dsp-ldsp-2.png" width="265" height="380" alt="">
             </li>
             <li class="certificates__item swiper-slide">
-              <img src="img/cert-small/7-сert-ldsp-e05.png" width="265" height="379" alt="">
+              <img src="img/cert-small/7-cert-ldsp-e05.png" width="265" height="379" alt="">
             </li>
             <li class="certificates__item swiper-slide">
-              <img src="img/cert-small/8-сert-ldsp-e1.png" width="265" height="380" alt="">
+              <img src="img/cert-small/8-cert-ldsp-e1.png" width="265" height="380" alt="">
             </li>
             <li class="certificates__item swiper-slide">
-              <img src="img/cert-small/9-сert-rollers.png" width="265" height="380" alt="">
+              <img src="img/cert-small/9-cert-rollers.png" width="265" height="380" alt="">
             </li>
             <li class="certificates__item swiper-slide">
-              <img src="img/cert-small/10-сert-p2-e05.png" width="265" height="380" alt="">
+              <img src="img/cert-small/10-cert-p2-e05.png" width="265" height="380" alt="">
             </li>
             <li class="certificates__item swiper-slide">
-              <img src="img/cert-small/11-сert-dsp-e1.png" width="265" height="380" alt="">
+              <img src="img/cert-small/11-cert-dsp-e1.png" width="265" height="380" alt="">
             </li>
           </ul>
         </div>
@@ -889,7 +889,7 @@
     <div class="page-footer__map-wrapper">
       <iframe class="page-footer__map" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=60.60572504997254%2C56.77992959029118%2C60.619887113571174%2C56.785301570166055&amp;layer=mapnik&amp;marker=56.78261567637601%2C60.61280608177185"></iframe>
       <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts">
+        <div class="page-footer__contacts contacts" id="contacts">
           <h2 class="contacts__heading">Наши контакты</h2>
           <div class="contacts__call-us">
             <div class="contacts__phones">
