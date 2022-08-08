@@ -28,6 +28,14 @@
   text-align: center;
 }
 
+.contacts__call-us .contacts__wa-link {
+  margin: 0;
+
+  & img {
+    display: block;
+  }
+}
+
 .contacts__email {
   display: block;
   @include font(Gilroy, bold, normal, 24px, normal, $basic-black);
