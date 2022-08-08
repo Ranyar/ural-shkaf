@@ -48,8 +48,27 @@
   display: flex;
 }
 
+.tooltips__advantages-list {
+  padding: 0 0 0 20px;
+  margin: 0;
+  list-style: none;
+}
+
 .tooltips__advantages-item {
   @include font(Gilroy, 500, normal, 14px, normal, $materials-titles);
+  margin-bottom: 18px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: -19px;
+    background-image: url("./../img/tooltips-marker.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .tooltips__item--rollers {
