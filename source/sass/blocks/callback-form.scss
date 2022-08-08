@@ -114,3 +114,31 @@
     margin-bottom: 5px;
   }
 }
+
+.callback-form--modal {
+  padding: 50px;
+  max-width: 560px;
+}
+
+.callback-form--modal .callback-form__heading {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.callback-form__wrapper--modal span {
+  @include font(Gilroy, normal, normal, 24px, normal, $basic-black);
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.callback-form__wrapper--modal .callback-form__legal {
+  @include font(Gilroy, normal, normal, 12px, normal, $basic-black);
+  text-align: center;
+  margin: 0 0 20px 0;
+  max-width: unset;
+}
+
+.callback-form__wrapper--modal input {
+  width: unset;
+}

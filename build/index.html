@@ -75,8 +75,8 @@
       <h1 class="promo__title">Шкафы-купе</h1>
       <p class="promo__description">от 25 000₽ под&nbsp;ключ за 7 дней</p>
       <div class="promo__call-to-actions">
-        <button class="button button--promo button--yellow">Оставить заявку</button>
-        <button class="button button--promo button--callback">Нужна консультация?</button>
+        <button class="button button--promo button--yellow button--order">Оставить заявку</button>
+        <button class="button button--promo button--callback button--consult">Нужна консультация?</button>
         <p class="promo__ads-call">Оставьте заявку на расчёт
           и&nbsp;получите бесплатный замер
           и проект уже завтра!</p>
@@ -931,6 +931,28 @@
       </div>
     </div>
   </footer>
+  <div class="modal modal--callback">
+    <div class="callback callback--modal">
+      <div class="callback__wrapper callback-form callback-form--modal">
+        <div class="callback-form__wrapper callback-form__wrapper--modal">
+          <form action="send.php" method="post" enctype="multipart/form-data" autocomplete="off">
+            <h3 class="callback-form__heading">Оставьте заявку</h3>
+            <span>и вам перезвонит наш менеджер</span>
+            <input type="hidden" name="form" value="callback">
+            <label class="visually-hidden" for="name-field">Имя</label>
+            <input class="callback-form__name-input" id="name-field-callback" type="text" name="name-callback" placeholder="Как вас зовут?" required="">
+            <label class="visually-hidden" for="phone-field">Телефон</label>
+            <input class="callback-form__phone-input" id="phone-field-callback" type="tel" name="phone-callback" placeholder="Телефон" required="">
+            <button class="button button--yellow button--callback-form button--callback-form-modal" type="submit">Оставить заявку</button>
+            <p class="callback-form__legal">Нажимая кнопку "Оставить заявку" вы соглашаетесь на обработку<br> персональных данных в соответствии с ФЗ №152</p>
+          </form>
+        </div>
+        <button class="modal__close modal__close--callback" type="button">
+          <img src="img/modal-close.png" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>

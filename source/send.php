@@ -6,6 +6,9 @@ if (isset($_POST['phone'])) {$phone = $_POST['phone'];}
 if (isset($_POST['name-trust'])) {$name = $_POST['name-trust'];}
 if (isset($_POST['phone-trust'])) {$phone = $_POST['phone-trust'];}
 
+if (isset($_POST['name-callback'])) {$name = $_POST['name-callback'];}
+if (isset($_POST['phone-callback'])) {$phone = $_POST['phone-callback'];}
+
 /* Сюда впишите свою эл. почту */
 $myaddres  = "kuznetsov4workmail@gmail.com"; // кому отправляем
 

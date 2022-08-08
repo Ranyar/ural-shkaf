@@ -209,95 +209,65 @@ if (accordions) {
 //     }
 //   });
 // }
-//
-// // ----- Модальные окна
-// const filter = document.querySelector(`.filter`);
-// const login = document.querySelector(`.login`);
-// const openFilterButton = document.querySelector(`.catalog__filter-button button`);
-// const headerLoginButton = document.querySelector(`.user-menu__item--login a`);
-// const mainNavLoginButton = document.querySelector(`.main-nav__item--login a`);
-// const filterCloseButton = document.querySelector(`.filter__close`);
-// const loginCloseButton = document.querySelector(`.login__close`);
-// const modals = document.querySelectorAll(`.modal`);
-//
-// if (filter) {
-//   filter.classList.remove(`filter--nojs`);
-// }
-//
-// const filterModal = document.querySelector(`.filter--modal`);
-// const filterWrapper = document.querySelector(`.filter__wrapper`);
-// if (filterModal) {
-//   const nameFilter = filterModal.querySelector(`input[name="necklaces"]`);
-//   openFilterButton.addEventListener(`click`, (evt) => {
-//     evt.preventDefault();
-//     filterModal.classList.add(`modal`);
-//     filterModal.classList.add(`modal--show`);
-//     filterWrapper.classList.add(`modal__wrapper`);
-//     filterWrapper.classList.add(`modal__wrapper--filter`);
-//     pageBody.classList.add(`page-body--no-scroll`);
-//     nameFilter.focus();
-//   });
-//   filterCloseButton.addEventListener(`click`, () => {
-//     filterModal.classList.remove(`modal`);
-//     filterModal.classList.remove(`modal--show`);
-//     filterWrapper.classList.remove(`modal__wrapper`);
-//     filterWrapper.classList.remove(`modal__wrapper--filter`);
-//     pageBody.classList.remove(`page-body--no-scroll`);
-//   });
-// }
-//
-// const modalLogin = document.querySelector(`.modal--login`);
-// if (modalLogin) {
-//   const nameLogin = modalLogin.querySelector(`input[name="useremail"]`);
-//   headerLoginButton.addEventListener(`click`, (evt) => {
-//     evt.preventDefault();
-//     modalLogin.classList.add(`modal--show`);
-//     pageBody.classList.add(`page-body--no-scroll`);
-//     nameLogin.focus();
-//   });
-//   mainNavLoginButton.addEventListener(`click`, (evt) => {
-//     evt.preventDefault();
-//     modalLogin.classList.add(`modal--show`);
-//     pageBody.classList.add(`page-body--no-scroll`);
-//     nameLogin.focus();
-//   });
-//   loginCloseButton.addEventListener(`click`, () => {
-//     modalLogin.classList.remove(`modal--show`);
-//     pageBody.classList.remove(`page-body--no-scroll`);
-//   });
-// }
-//
-// if (modals.length !== 0) {
-//   for (let i = 0; i < modals.length; i++) {
-//     window.addEventListener(`keydown`, (evt) => {
-//       if (evt.key === `Escape` || evt.key === `Esc`) {
-//         if (modals[i].classList.contains(`modal--show`)) {
-//           modals[i].classList.remove(`modal--show`);
-//         } pageBody.classList.remove(`page-body--no-scroll`);
-//         if (filterModal) {
-//           filterModal.classList.remove(`modal--show`);
-//           pageBody.classList.remove(`page-body--no-scroll`);
-//         }
-//       }
-//     });
-//
-//     modals[i].addEventListener(`click`, (evt) => {
-//       if (evt.target.classList.contains(`modal--show`) || evt.target.classList.contains(`modal__wrapper`)) {
-//         modals[i].classList.remove(`modal--show`);
-//         pageBody.classList.remove(`page-body--no-scroll`);
-//       }
-//     });
-//     if (filterModal) {
-//       filterModal.addEventListener(`click`, (evt) => {
-//         if (filterModal && evt.target.classList.contains(`modal--show`) || evt.target.classList.contains(`modal__wrapper`)) {
-//           filterModal.classList.remove(`modal--show`);
-//           pageBody.classList.remove(`page-body--no-scroll`);
-//         }
-//       });
-//     }
-//   }
-// }
-//
+
+// ----- Модальные окна
+const pageBody = document.querySelector(`.page-body`);
+const callback = document.querySelector(`.callback`);
+const headerCallbackButton = document.querySelector(`.button--callback`);
+const orderButton = document.querySelector(`.button--order`);
+const consultButton = document.querySelector(`.button--consult`);
+const modalCloseButton = document.querySelector(`.modal__close`);
+const modals = document.querySelectorAll(`.modal`);
+
+console.log(modalCloseButton);
+
+const modalCallback = document.querySelector(`.modal--callback`);
+if (modalCallback) {
+  const nameCallback = modalCallback.querySelector(`input`);
+  headerCallbackButton.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    modalCallback.classList.add(`modal--show`);
+    pageBody.classList.add(`page-body--no-scroll`);
+    nameCallback.focus();
+  });
+  orderButton.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    modalCallback.classList.add(`modal--show`);
+    pageBody.classList.add(`page-body--no-scroll`);
+    nameCallback.focus();
+  });
+  consultButton.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    modalCallback.classList.add(`modal--show`);
+    pageBody.classList.add(`page-body--no-scroll`);
+    nameCallback.focus();
+  });
+  modalCloseButton.addEventListener(`click`, () => {
+    console.log(`Клик!`);
+    modalCallback.classList.remove(`modal--show`);
+    pageBody.classList.remove(`page-body--no-scroll`);
+  });
+}
+
+if (modals.length !== 0) {
+  for (let i = 0; i < modals.length; i++) {
+    window.addEventListener(`keydown`, (evt) => {
+      if (evt.key === `Escape` || evt.key === `Esc`) {
+        if (modals[i].classList.contains(`modal--show`)) {
+          modals[i].classList.remove(`modal--show`);
+        } pageBody.classList.remove(`page-body--no-scroll`);
+      }
+    });
+
+    modals[i].addEventListener(`click`, (evt) => {
+      if (evt.target.classList.contains(`modal--show`) || evt.target.classList.contains(`modal__wrapper`)) {
+        modals[i].classList.remove(`modal--show`);
+        pageBody.classList.remove(`page-body--no-scroll`);
+      }
+    });
+  }
+}
+
 // // ----- Перехват фокуса в модальном окне фильтра
 //
 // const firstElementFilter = document.querySelector(`#necklaces`);
