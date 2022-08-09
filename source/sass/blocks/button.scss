@@ -48,11 +48,15 @@
 }
 
 .button--materials {
-  margin: 0 auto 45px;
+  margin: 25px auto 45px;
   width: 275px;
   height: 72px;
 }
 
 .button--callback-form-modal {
   width: unset;
+}
+
+.button--hidden {
+  display: none;
 }

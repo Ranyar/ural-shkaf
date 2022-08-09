@@ -212,14 +212,13 @@ if (accordions) {
 
 // ----- Модальные окна
 const pageBody = document.querySelector(`.page-body`);
-const callback = document.querySelector(`.callback`);
+// const callback = document.querySelector(`.callback`);
 const headerCallbackButton = document.querySelector(`.button--callback`);
 const orderButton = document.querySelector(`.button--order`);
 const consultButton = document.querySelector(`.button--consult`);
+const cupboardsTypes = document.querySelectorAll(`.cupboards-types__item`);
 const modalCloseButton = document.querySelector(`.modal__close`);
 const modals = document.querySelectorAll(`.modal`);
-
-console.log(modalCloseButton);
 
 const modalCallback = document.querySelector(`.modal--callback`);
 if (modalCallback) {
@@ -242,8 +241,15 @@ if (modalCallback) {
     pageBody.classList.add(`page-body--no-scroll`);
     nameCallback.focus();
   });
+  for (let i = 0; i < cupboardsTypes.length; i++) {
+    cupboardsTypes[i].addEventListener(`click`, (evt) => {
+      evt.preventDefault();
+      modalCallback.classList.add(`modal--show`);
+      pageBody.classList.add(`page-body--no-scroll`);
+      nameCallback.focus();
+    });
+  }
   modalCloseButton.addEventListener(`click`, () => {
-    console.log(`Клик!`);
     modalCallback.classList.remove(`modal--show`);
     pageBody.classList.remove(`page-body--no-scroll`);
   });
@@ -266,6 +272,55 @@ if (modals.length !== 0) {
       }
     });
   }
+}
+
+// ----- Обработчик скрытых блоков с примерами материалов
+const materials = document.querySelectorAll(`.cupboards-materials__item`);
+const materialsLdsp = document.querySelector(`.cupboards-materials__item--ldsp`);
+const materialsMirror = document.querySelector(`.cupboards-materials__item--mirror`);
+const materialsMirrorDecor = document.querySelector(`.cupboards-materials__item--mirror-decor`);
+const materialsGlassDecor = document.querySelector(`.cupboards-materials__item--glass-decor`);
+const materialsInsetDecor = document.querySelector(`.cupboards-materials__item--inset-decor`);
+// const containers = document.querySelectorAll(`.cupboards-materials__container`);
+const containerLdsp = document.querySelector(`.cupboards-materials__container--ldsp`);
+const containerMirror = document.querySelector(`.cupboards-materials__container--mirror`);
+const containerMirrorDecor = document.querySelector(`.cupboards-materials__container--mirror-decor`);
+const containerGlassDecor = document.querySelector(`.cupboards-materials__container--glass-decor`);
+const containerInsetDecor = document.querySelector(`.cupboards-materials__container--inset-decor`);
+
+if (materials) {
+  for (let i = 0; i < materials.length; i++) {
+    materials[i].addEventListener(`click`, () => {
+      if (materials[i] === materialsLdsp) {
+        containerLdsp.classList.toggle(`cupboards-materials__container--shown`);
+      }
+      if (materials[i] === materialsMirror) {
+        containerMirror.classList.toggle(`cupboards-materials__container--shown`);
+      }
+      if (materials[i] === materialsMirrorDecor) {
+        containerMirrorDecor.classList.toggle(`cupboards-materials__container--shown`);
+      }
+      if (materials[i] === materialsGlassDecor) {
+        containerGlassDecor.classList.toggle(`cupboards-materials__container--shown`);
+      }
+      if (materials[i] === materialsInsetDecor) {
+        containerInsetDecor.classList.toggle(`cupboards-materials__container--shown`);
+      }
+    });
+  }
+}
+
+// ----- Показ третьего блока с материалами
+
+const materialsButton = document.querySelector(`.button--materials`);
+const materialsThirdBlock = document.querySelector(`.cupboards-materials__list--third `);
+
+if (materialsThirdBlock && materialsButton) {
+  materialsButton.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    materialsThirdBlock.classList.add(`cupboards-materials__list--shown`);
+    materialsButton.classList.add(`button--hidden`);
+  });
 }
 
 // // ----- Перехват фокуса в модальном окне фильтра
