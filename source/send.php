@@ -10,7 +10,7 @@ if (isset($_POST['name-callback'])) {$name = $_POST['name-callback'];}
 if (isset($_POST['phone-callback'])) {$phone = $_POST['phone-callback'];}
 
 /* Сюда впишите свою эл. почту */
-$myaddres  = "kuznetsov4workmail@gmail.com"; // кому отправляем
+$myaddres  = "uralshkaf@mail.ru"; // кому отправляем
 
 /* А здесь прописывается текст сообщения, \n - перенос строки */
 $mes = "Тема: Заказ обратного звонка!\nТелефон: $phone\nИмя: $name";
