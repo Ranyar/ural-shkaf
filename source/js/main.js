@@ -100,55 +100,6 @@ const swiperCertificates = new Swiper(`.swiper-certificates`, {
   },
 });
 
-// // ----- Меню
-//
-// const pageBody = document.querySelector(`.page-body`);
-// const pageHeaderWrapper = document.querySelector(`.page-header__wrapper`);
-// const mainNav = document.querySelector(`.main-nav`);
-// const mainNavList = document.querySelector(`.main-nav__list`);
-// const toggleButton = document.querySelector(`.page-header__menu-toggle`);
-// const cartIcon = document.querySelector(`.user-menu__item--cart`);
-// const logoIcon = document.querySelector(`.page-header__logo`);
-// const userMenu = document.querySelector(`.user-menu`);
-// const search = document.querySelector(`.page-header__search`);
-//
-// pageHeaderWrapper.classList.remove(`page-header__wrapper--nojs`);
-// mainNav.classList.remove(`main-nav--nojs`);
-// mainNavList.classList.remove(`main-nav__list--nojs`);
-// toggleButton.classList.remove(`page-header__menu-toggle--nojs`);
-// cartIcon.classList.remove(`user-menu__item--nojs`);
-// logoIcon.classList.remove(`page-header__logo--nojs`);
-// userMenu.classList.remove(`user-menu--nojs`);
-// search.classList.remove(`page-header__search--nojs`);
-//
-// toggleButton.addEventListener(`click`, function () {
-//   if (pageHeaderWrapper.classList.contains(`page-header__wrapper--toggled`)) {
-//     pageBody.classList.remove(`page-body--lock`);
-//     pageHeaderWrapper.classList.remove(`page-header__wrapper--toggled`);
-//     pageHeaderWrapper.classList.remove(`page-header__wrapper--lock`);
-//     mainNav.classList.remove(`main-nav--toggled`);
-//     mainNav.classList.remove(`main-nav__list--toggled`);
-//     toggleButton.classList.remove(`page-header__menu-toggle--toggled`);
-//     cartIcon.classList.remove(`user-menu__item--toggled`);
-//     logoIcon.classList.remove(`page-header__logo--toggled`);
-//     userMenu.classList.remove(`user-menu--toggled`);
-//     search.classList.remove(`page-header__search--toggled`);
-//   } else {
-//     pageBody.classList.add(`page-body--lock`);
-//     pageHeaderWrapper.classList.add(`page-header__wrapper--toggled`);
-//     pageHeaderWrapper.classList.add(`page-header__wrapper--lock`);
-//     mainNav.classList.add(`main-nav--toggled`);
-//     mainNav.classList.add(`main-nav__list--toggled`);
-//     toggleButton.classList.add(`page-header__menu-toggle--toggled`);
-//     cartIcon.classList.add(`user-menu__item--toggled`);
-//     logoIcon.classList.add(`page-header__logo--toggled`);
-//     userMenu.classList.add(`user-menu--toggled`);
-//     search.classList.add(`page-header__search--toggled`);
-//   }
-// });
-//
-// // ----- Аккордеон
-//
 const accordions = document.querySelectorAll(`.accordion`);
 
 const accordionItems = document.querySelectorAll(`.accordion__item`);
@@ -194,21 +145,6 @@ if (accordions) {
     });
   }
 }
-
-// // ----- Перехват фокуса на аккордеон на Главной
-//
-// const followerItemMain = document.querySelector(`.blog-list:last-child a`);
-// const interceptorItemMain = document.querySelector(`.accordion__item:first-child`);
-//
-// if (accordions.length !== 0 && followerItemMain) {
-//   followerItemMain.addEventListener(`keydown`, function (event) {
-//
-//     if (event.keyCode === 9 && !event.shiftKey) {
-//       event.preventDefault();
-//       interceptorItemMain.focus();
-//     }
-//   });
-// }
 
 // ----- Модальные окна
 const pageBody = document.querySelector(`.page-body`);
@@ -275,36 +211,21 @@ if (modals.length !== 0) {
 }
 
 // ----- Обработчик скрытых блоков с примерами материалов
+
 const materials = document.querySelectorAll(`.cupboards-materials__item`);
-const materialsLdsp = document.querySelector(`.cupboards-materials__item--ldsp`);
-const materialsMirror = document.querySelector(`.cupboards-materials__item--mirror`);
-const materialsMirrorDecor = document.querySelector(`.cupboards-materials__item--mirror-decor`);
-const materialsGlassDecor = document.querySelector(`.cupboards-materials__item--glass-decor`);
-const materialsInsetDecor = document.querySelector(`.cupboards-materials__item--inset-decor`);
-// const containers = document.querySelectorAll(`.cupboards-materials__container`);
-const containerLdsp = document.querySelector(`.cupboards-materials__container--ldsp`);
-const containerMirror = document.querySelector(`.cupboards-materials__container--mirror`);
-const containerMirrorDecor = document.querySelector(`.cupboards-materials__container--mirror-decor`);
-const containerGlassDecor = document.querySelector(`.cupboards-materials__container--glass-decor`);
-const containerInsetDecor = document.querySelector(`.cupboards-materials__container--inset-decor`);
+const containers = document.querySelectorAll(`.cupboards-materials__container`);
 
 if (materials) {
   for (let i = 0; i < materials.length; i++) {
     materials[i].addEventListener(`click`, () => {
-      if (materials[i] === materialsLdsp) {
-        containerLdsp.classList.toggle(`cupboards-materials__container--shown`);
-      }
-      if (materials[i] === materialsMirror) {
-        containerMirror.classList.toggle(`cupboards-materials__container--shown`);
-      }
-      if (materials[i] === materialsMirrorDecor) {
-        containerMirrorDecor.classList.toggle(`cupboards-materials__container--shown`);
-      }
-      if (materials[i] === materialsGlassDecor) {
-        containerGlassDecor.classList.toggle(`cupboards-materials__container--shown`);
-      }
-      if (materials[i] === materialsInsetDecor) {
-        containerInsetDecor.classList.toggle(`cupboards-materials__container--shown`);
+      const clickedDataTab = materials[i].getAttribute(`data-tab`);
+      for (let j = 0; j < containers.length; j++) {
+        const dataTabContent = containers[j].getAttribute(`data-tab-content`);
+        if (clickedDataTab === dataTabContent) {
+          containers[j].classList.toggle(`cupboards-materials__container--shown`);
+        } else {
+          containers[j].classList.remove(`cupboards-materials__container--shown`);
+        }
       }
     });
   }
@@ -322,67 +243,3 @@ if (materialsThirdBlock && materialsButton) {
     materialsButton.classList.add(`button--hidden`);
   });
 }
-
-// // ----- Перехват фокуса в модальном окне фильтра
-//
-// const firstElementFilter = document.querySelector(`#necklaces`);
-// const lastElementFilter = document.querySelector(`.filter__close`);
-//
-// if (lastElementFilter) {
-//   lastElementFilter.addEventListener(`keydown`, function (event) {
-//     event.preventDefault();
-//     if (event.keyCode === 9) {
-//       firstElementFilter.focus();
-//     }
-//   });
-// }
-//
-// // ----- Перехват фокуса фильтра в каталоге
-//
-// const followerItemCatalog = document.querySelector(`.main-nav__item:last-child a`);
-// const interceptorItemFilter = document.querySelector(`input[name="necklaces"]`);
-// const followerItemFilter = document.querySelector(`.filter__btn:last-child`);
-// const interceptorItemCatalog = document.querySelector(`.slider-item--catalog:first-child`);
-//
-// if (followerItemCatalog && filter) {
-//   followerItemCatalog.addEventListener(`keydown`, function (event) {
-//     event.preventDefault();
-//     if (event.keyCode === 9) {
-//       interceptorItemFilter.focus();
-//     }
-//   });
-// }
-//
-// if (followerItemFilter) {
-//   followerItemFilter.addEventListener(`keydown`, function (event) {
-//     event.preventDefault();
-//     if (event.keyCode === 9) {
-//       interceptorItemCatalog.focus();
-//     }
-//   });
-// }
-//
-// // ----- Перехват фокуса в модальном окне логина
-//
-// const firstElementLogin = document.querySelector(`#useremail`);
-// const lastElementLogin = document.querySelector(`.login__close`);
-//
-// if (lastElementLogin) {
-//   lastElementLogin.addEventListener(`keydown`, function (event) {
-//     event.preventDefault();
-//     if (event.keyCode === 9) {
-//       firstElementLogin.focus();
-//     }
-//   });
-// }
-//
-// // ----- local storage для модального окна
-//
-// const loginInputEmail = document.getElementById(`useremail`);
-//
-// if (login) {
-//   loginInputEmail.value = localStorage.getItem(`modal-name`);
-//   loginInputEmail.addEventListener(`input`, () => {
-//     localStorage.setItem(`modal-name`, loginInputEmail.value);
-//   });
-// }

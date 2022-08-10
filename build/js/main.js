@@ -275,36 +275,21 @@ if (modals.length !== 0) {
 }
 
 // ----- Обработчик скрытых блоков с примерами материалов
+
 const materials = document.querySelectorAll(`.cupboards-materials__item`);
-const materialsLdsp = document.querySelector(`.cupboards-materials__item--ldsp`);
-const materialsMirror = document.querySelector(`.cupboards-materials__item--mirror`);
-const materialsMirrorDecor = document.querySelector(`.cupboards-materials__item--mirror-decor`);
-const materialsGlassDecor = document.querySelector(`.cupboards-materials__item--glass-decor`);
-const materialsInsetDecor = document.querySelector(`.cupboards-materials__item--inset-decor`);
-// const containers = document.querySelectorAll(`.cupboards-materials__container`);
-const containerLdsp = document.querySelector(`.cupboards-materials__container--ldsp`);
-const containerMirror = document.querySelector(`.cupboards-materials__container--mirror`);
-const containerMirrorDecor = document.querySelector(`.cupboards-materials__container--mirror-decor`);
-const containerGlassDecor = document.querySelector(`.cupboards-materials__container--glass-decor`);
-const containerInsetDecor = document.querySelector(`.cupboards-materials__container--inset-decor`);
+const containers = document.querySelectorAll(`.cupboards-materials__container`);
 
 if (materials) {
   for (let i = 0; i < materials.length; i++) {
     materials[i].addEventListener(`click`, () => {
-      if (materials[i] === materialsLdsp) {
-        containerLdsp.classList.toggle(`cupboards-materials__container--shown`);
-      }
-      if (materials[i] === materialsMirror) {
-        containerMirror.classList.toggle(`cupboards-materials__container--shown`);
-      }
-      if (materials[i] === materialsMirrorDecor) {
-        containerMirrorDecor.classList.toggle(`cupboards-materials__container--shown`);
-      }
-      if (materials[i] === materialsGlassDecor) {
-        containerGlassDecor.classList.toggle(`cupboards-materials__container--shown`);
-      }
-      if (materials[i] === materialsInsetDecor) {
-        containerInsetDecor.classList.toggle(`cupboards-materials__container--shown`);
+      const clickedDataTab = materials[i].getAttribute(`data-tab`);
+      for (let j = 0; j < containers.length; j++) {
+        const dataTabContent = containers[j].getAttribute(`data-tab-content`);
+        if (clickedDataTab === dataTabContent) {
+          containers[j].classList.toggle(`cupboards-materials__container--shown`);
+        } else {
+          containers[j].classList.remove(`cupboards-materials__container--shown`);
+        }
       }
     });
   }
