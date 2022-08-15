@@ -85,3 +85,17 @@
     top: -320px;
   }
 }
+
+@media (max-width: $mobile-max-width) {
+  .certificates__heading {
+    font-size: 20px;
+  }
+
+  .certificates .swiper-button-prev--certificates {
+    top: -220px;
+  }
+
+  .certificates .swiper-button-next--certificates {
+    top: -220px;
+  }
+}

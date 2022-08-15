@@ -127,3 +127,19 @@
     }
   }
 }
+
+@media (max-width: $tablet-max-width) {
+ .cupboards-types__item {
+   & .cupboards-types__price {
+     display: block;
+   }
+
+   & .cupboards-types__count-text{
+     display: inline-block;
+   }
+
+   & .cupboards-types__heading{
+     margin: 0 0 20px 0;
+   }
+ }
+}

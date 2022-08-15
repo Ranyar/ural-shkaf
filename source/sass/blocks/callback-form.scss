@@ -172,3 +172,27 @@
     text-align: center;
   }
 }
+
+@media (max-width: $mobile-max-width) {
+  .callback-form__wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .callback-form {
+    padding: 36px 20px 36px 20px;
+  }
+
+  .callback-form__wrapper form {
+    width: 100%;
+
+    & input {
+      width: 100%;
+    }
+  }
+
+  .callback-form--trust {
+    padding: 36px 20px 36px 20px;
+  }
+}

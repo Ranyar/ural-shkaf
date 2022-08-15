@@ -402,3 +402,9 @@
     width: 298px;
   }
 }
+
+@media (max-width: $mobile-max-width) {
+  .products__item {
+    margin-bottom: 15px;
+  }
+}

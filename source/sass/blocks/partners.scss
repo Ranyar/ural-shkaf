@@ -118,3 +118,14 @@
     margin: 0 auto;
   }
 }
+
+
+@media (max-width: $mobile-max-width) {
+  .partners .swiper-button-prev.swiper-button-prev--partners {
+    right: 40px;
+  }
+
+  .partners .swiper-button-next.swiper-button-next--partners {
+    right: 0;
+  }
+}

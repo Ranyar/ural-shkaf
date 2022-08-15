@@ -95,5 +95,22 @@
     grid-template-columns: 1fr;
     grid-template-rows: unset;
     margin: 0 auto;
+  }
 }
+
+@media (max-width: $mobile-max-width) {
+  .how-we-work__wrapper::before {
+    top: 0;
+    left: 55%;
+    width: 152px;
+    height: 206px;
+  }
+
+  .how-we-work__item {
+    padding: 41px 25px 13px 25px;
+
+    &::before {
+      z-index: -1;
+    }
+  }
 }

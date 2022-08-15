@@ -76,3 +76,9 @@
   }
 }
 
+@media (max-width: $mobile-max-width) {
+  .portfolio__heading {
+    font-size: 20px;
+    max-width: 180px;
+  }
+}

@@ -84,3 +84,9 @@
     padding: 24px 16px;
   }
 }
+
+@media (max-width: $mobile-max-width) {
+  .page-footer__legal {
+    margin: 0 5px 7px 0;
+  }
+}

@@ -114,3 +114,9 @@
     height: 173px;
   }
 }
+
+@media (max-width: $mobile-max-width) {
+  .cupboards-materials__heading {
+    font-size: 20px;
+  }
+}

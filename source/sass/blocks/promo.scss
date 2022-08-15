@@ -174,3 +174,53 @@
     font-size: 36px;
   }
 }
+
+@media (max-width: $mobile-max-width) {
+  .promo {
+    padding: 60px 16px 40px;
+  }
+
+  .promo__title {
+    font-size: 52px;
+    margin-bottom: 20px;
+  }
+
+  .promo__free-services {
+    line-height: 140%;
+    max-width: 156px;
+    margin: 0;
+  }
+
+  .promo__description {
+    max-width: 360px;
+    margin-bottom: 30px;
+  }
+
+  .promo__call-to-actions {
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+
+  .promo__ads-call {
+    display: none;
+  }
+
+  .promo__call-to-actions .button--order {
+    margin-bottom: 10px;
+  }
+
+  .promo__call-to-actions .button--callback {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .promo__work-area {
+    max-width: 273px;
+    line-height: 140%;
+    margin: 0 0 45px;
+  }
+
+  .promo__about {
+    font-size: 20px;
+  }
+}

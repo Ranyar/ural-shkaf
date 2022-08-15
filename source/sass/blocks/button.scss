@@ -76,3 +76,13 @@
     min-width: 215px;
   }
 }
+
+@media (max-width: $mobile-max-width) {
+  .button--order::before {
+    display: none;
+  }
+
+  .button--callback-form {
+    width: 100%;
+  }
+}

@@ -108,3 +108,21 @@
     font-size: 9px;
   }
 }
+
+@media (max-width: $mobile-max-width) {
+  .top-info__logo-image {
+    margin-right: 20px;
+  }
+
+
+  .top-info__phone-block,
+  .top-info__wa {
+    display: none;
+  }
+
+  .top-info__logo-description {
+    font-size: 10px;
+    max-width: 103px;
+    padding-top: 2px;
+  }
+}

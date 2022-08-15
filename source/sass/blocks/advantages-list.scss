@@ -97,3 +97,9 @@
     }
   }
 }
+
+@media (max-width: $mobile-max-width) {
+  .advantages-list {
+    grid-template-columns: 1fr;
+  }
+}

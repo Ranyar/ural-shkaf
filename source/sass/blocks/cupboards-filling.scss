@@ -51,3 +51,9 @@
     padding: 30px 16px;
   }
 }
+
+@media (max-width: $mobile-max-width) {
+  .cupboards-filling {
+    display: none;
+  }
+}
