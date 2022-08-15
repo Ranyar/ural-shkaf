@@ -89,7 +89,7 @@ const swiperCertificates = new Swiper(`.swiper-certificates`, {
       slidesPerView: 2,
       slidesPerGroup: 2,
     },
-    768: {
+    640: {
       slidesPerView: 3,
       slidesPerGroup: 3,
     },
