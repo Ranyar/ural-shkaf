@@ -34,3 +34,26 @@
 .factory__photo-main img {
   display: block;
 }
+
+@media (max-width: $tablet-max-width) {
+  .factory__wrapper {
+    padding: 27px 16px 30px;
+  }
+
+  .factory__heading {
+    font-size: 36px;
+  }
+
+  .factory__photos {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    grid-gap: 34px 0;
+    max-width: fit-content;
+  }
+
+  .factory__photos-list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 34px;
+  }
+}

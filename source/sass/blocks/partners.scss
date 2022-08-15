@@ -11,7 +11,7 @@
   margin: 0 0 50px 0;
 }
 
-.partners p {
+.partners__description {
   @include font(Gilroy, 500, normal, 24px, normal, $basic-black);
   text-align: center;
   letter-spacing: -0.02em;
@@ -81,3 +81,40 @@
   top: 298px;
 }
 
+@media (max-width: $tablet-max-width) {
+  .partners__wrapper {
+    padding: 30px 16px;
+  }
+
+  .partners__heading {
+    font-size: 36px;
+  }
+
+  .partners .partners__list .partners__item {
+    max-width: 193px;
+    max-height: 118px;
+  }
+
+  .partners .partners__list .partners__item img {
+    width: 193px;
+    height: 118px;
+  }
+
+  .partners .swiper-button-prev.swiper-button-prev--partners {
+    right: 100px;
+    left: auto;
+    top: -180px;
+  }
+
+  .partners .swiper-button-next.swiper-button-next--partners {
+    right: 50px;
+    left: auto;
+    top: -180px;
+  }
+
+  .partners__description {
+    font-size: 16px;
+    max-width: 317px;
+    margin: 0 auto;
+  }
+}

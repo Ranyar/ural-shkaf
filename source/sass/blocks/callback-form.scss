@@ -142,3 +142,33 @@
 .callback-form__wrapper--modal input {
   width: unset;
 }
+
+@media (max-width: $tablet-max-width) {
+  .callback-form {
+    margin: 0 16px;
+  }
+
+  .callback-form--trust {
+    margin: 0;
+    padding: 36px 0 36px 36px;
+  }
+
+  .callback-form__heading {
+    font-size: 28px;
+    max-width: 425px;
+  }
+
+  .callback-form__manager {
+    padding-top: 0;
+  }
+
+  .callback-form__manager-name {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .callback-form__manager-function {
+    font-size: 14px;
+    text-align: center;
+  }
+}

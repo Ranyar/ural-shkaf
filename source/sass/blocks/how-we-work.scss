@@ -81,3 +81,19 @@
   @include font(Gilroy, 500, normal, 15px, normal, $basic-black);
   margin: 0 0 20px 0;
 }
+
+@media (max-width: $tablet-max-width) {
+  .how-we-work__wrapper {
+    padding: 49px 16px 23px;
+  }
+
+  .how-we-work__heading {
+    font-size: 36px;
+  }
+
+  .how-we-work__list {
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+    margin: 0 auto;
+}
+}

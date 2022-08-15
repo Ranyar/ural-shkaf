@@ -13,3 +13,13 @@
   letter-spacing: -1px;
   margin: 0 0 38px 0;
 }
+
+@media (max-width: $tablet-max-width) {
+  .trust__wrapper {
+    padding: 30px 16px 40px;
+  }
+
+  .trust__heading {
+    font-size: 36px;
+  }
+}

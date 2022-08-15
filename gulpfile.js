@@ -51,11 +51,11 @@ gulp.task(`refresh`, function (done) {
 
 gulp.task(`images`, function () {
   return gulp.src(`source/img/**/*.{png,jpg,svg}`)
-      // .pipe(imagemin([
-      //   imagemin.optipng({optimizationLevel: 3}),
-      //   imagemin.jpegtran({progressive: true}),
-      //   imagemin.svgo()
-      // ]))
+      .pipe(imagemin([
+        imagemin.optipng({optimizationLevel: 3}),
+        imagemin.jpegtran({progressive: true}),
+        imagemin.svgo()
+      ]))
 
       .pipe(gulp.dest(`build/img`));
 
@@ -85,7 +85,7 @@ gulp.task(`html`, function () {
 gulp.task(`copy`, function () {
   return gulp.src([
     `source/fonts/**/*.{woff,woff2}`,
-    // `source/img/**`,
+    `source/img/**`,
     `source/js/**`,
     `source//*.ico`
   ], {

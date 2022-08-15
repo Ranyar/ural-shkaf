@@ -81,3 +81,19 @@
     margin-right: 0;
   }
 }
+
+.advantages-list {
+  padding: 0 16px;
+}
+
+@media (max-width: $tablet-max-width) {
+  .advantages-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    &--additional {
+      grid-gap: 20px 0;
+    }
+  }
+}

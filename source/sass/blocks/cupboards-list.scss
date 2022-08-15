@@ -40,3 +40,35 @@
   bottom: 47px;
   left: 0;
 }
+
+@media (max-width: $tablet-max-width) {
+  .cupboards-list {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 70px;
+
+    &::-webkit-scrollbar-track {
+      background: #37393b;
+      border-radius: 3px;
+      margin: 0 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $materials-scrollbar-thumb;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar {
+      padding: 0 5px;
+      height: 6px;
+      background: transparent;
+    }
+  }
+
+  .cupboards-list__item {
+    width: 292px;
+    height: 418px;
+  }
+}

@@ -43,3 +43,36 @@
   opacity: 0.7;
 }
 
+@media (max-width: $tablet-max-width) {
+  .portfolio__wrapper {
+    padding: 84px 16px;
+  }
+
+  .portfolio__heading {
+    font-size: 35px;
+    max-width: 461px;
+  }
+
+  .products__list .products__item {
+    width: 94px;
+    height: 79px;
+  }
+
+  .products__list .products__item.products__item--first {
+    width: 298px;
+    height: 503px;
+  }
+
+  .portfolio .swiper-button-prev--portfolio {
+    top: 130px;
+    right: 76px;
+    left: auto;
+  }
+
+  .portfolio .swiper-button-next--portfolio {
+    top: 130px;
+    right: 16px;
+    left: auto;
+  }
+}
+

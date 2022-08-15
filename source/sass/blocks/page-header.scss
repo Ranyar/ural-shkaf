@@ -15,3 +15,9 @@
   max-width: 1250px;
   margin: 0 auto;
 }
+
+@media (max-width: $tablet-max-width) {
+  .page-header__wrapper-top {
+    border-bottom: none;
+  }
+}

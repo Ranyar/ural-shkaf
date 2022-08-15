@@ -76,3 +76,41 @@
 .cupboards-materials__list--shown {
   display: flex;
 }
+
+@media (max-width: $tablet-max-width) {
+  .cupboards-materials__heading {
+    padding: 36px 16px 30px;
+    font-size: 36px;
+  }
+
+  .cupboards-materials__list {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 36px;
+    padding: 25px 16px 80px;
+
+    &::-webkit-scrollbar-track {
+      background: #37393b;
+      border-radius: 3px;
+      margin: 0 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $materials-scrollbar-thumb;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar {
+      padding: 0 5px;
+      height: 6px;
+      background: transparent;
+    }
+  }
+
+  .cupboards-materials__item {
+    width: 266px;
+    height: 173px;
+  }
+}

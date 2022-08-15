@@ -181,3 +181,56 @@
   bottom: 72px;
   left: 0;
 }
+
+@media (max-width: $tablet-max-width) {
+  .tooltips__item--rollers .tooltips__content {
+    bottom: 55px;
+    left: -135px;
+  }
+
+  .tooltips__item--baskets .tooltips__content {
+    bottom: 55px;
+    left: -185px;
+  }
+
+  .tooltips__item--profile .tooltips__content {
+    top: 55px;
+    right: -95px;
+    left: unset;
+  }
+
+  .tooltips__item--shoe-mesh .tooltips__content {
+    bottom: 55px;
+    left: -41px;
+  }
+
+  .tooltips__item--angles .tooltips__content {
+    top: 55px;
+    left: -305px;
+  }
+
+  .tooltips__item--schlegel .tooltips__content {
+    top: 55px;
+    right: -150px;
+  }
+
+  .tooltips__item--trousers-hangers .tooltips__content {
+    top: 55px;
+    right: 0;
+  }
+
+  .tooltips__item--open-guide-rails .tooltips__content {
+    bottom: 55px;
+    right: 0;
+  }
+
+  .tooltips__item--hidden-guide-rails .tooltips__content {
+    bottom: 55px;
+    right: 0;
+  }
+
+  .tooltips__item--pantograph .tooltips__content {
+    bottom: 55px;
+    left: 0;
+  }
+}

@@ -74,3 +74,13 @@
 .page-footer__scroll-to-top:active {
   opacity: 0.5;
 }
+
+@media (max-width: $tablet-max-width) {
+  .page-footer__wrapper {
+    padding: 17px 0 0 0;
+  }
+
+  .page-footer__bottom-wrapper {
+    padding: 24px 16px;
+  }
+}

@@ -392,3 +392,13 @@
     background-image:url("./../img/hallway/hallway-14-1.png");
   }
 }
+
+@media (max-width: $tablet-max-width) {
+  .products {
+    width: 298px!important;
+  }
+
+  .products__list {
+    width: 298px;
+  }
+}

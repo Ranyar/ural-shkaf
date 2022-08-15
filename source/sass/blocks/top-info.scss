@@ -52,3 +52,59 @@
   @include font(Gilroy, 500, normal, 11px, normal, $basic-white );
   padding-left: 8px;
 }
+
+@media (max-width: 1239px) {
+  .top-info {
+    padding: 26px 30px 20px;
+  }
+
+  .top-info__logo {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .top-info__ask-us {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .top-info {
+    padding: 16px 16px 20px;
+  }
+
+  .top-info__logo-image img {
+    width: 113px;
+    height: fit-content;
+  }
+
+  .top-info__logo-description {
+    font-size: 12px;
+    height: fit-content;
+    max-width: 170px;
+  }
+
+  .top-info__phone-block {
+    min-width: 134px;
+    margin-left: 0;
+  }
+
+  .top-info__phone-block .top-info__phone-number {
+    font-size: 19px;
+    line-height: 37px;
+  }
+
+  .top-info__phone-block span {
+    font-size: 9px;
+  };
+
+  .top-info__wa {
+    width: 39px;
+    height: 39px;
+    margin-left: 30px;
+  }
+
+  .top-info__phone-block span:last-child {
+    font-size: 9px;
+  }
+}

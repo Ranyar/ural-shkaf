@@ -97,3 +97,49 @@
   text-align: right;
   margin: 0 19px 0 0;
 }
+
+@media (max-width: $tablet-max-width) {
+  .contacts {
+    width: 100%;
+    height: 330px;
+    padding: 24px 16px 0 16px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .contacts__heading {
+    font-size: 36px;
+    grid-row: 1 / 2;
+  }
+
+  .contacts__call-us {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    .contacts__phones {
+      display: flex;
+      flex-wrap: wrap;
+
+      & a {
+        margin: 0;
+      }
+    }
+  }
+
+  .contacts__email {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .contacts__address {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    justify-self: right;
+  }
+
+  .contacts__bottom-wrapper {
+    grid-column: 1 / 3;
+    grid-row: 5 / 5;
+  }
+}

@@ -92,3 +92,38 @@
   padding-top: 7px;
   margin-right: 18px;
 }
+
+@media (max-width: $tablet-max-width) {
+  .cupboards-types__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar-track {
+      background: #37393b;
+      border-radius: 3px;
+      margin: 0 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $materials-scrollbar-thumb;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar {
+      padding: 0 5px;
+      height: 6px;
+      background: transparent;
+    }
+  }
+
+  .cupboards-types__item {
+    width: 423px;
+    height: 418px;
+
+    & img {
+      height: 100%;
+    }
+  }
+}

@@ -60,3 +60,19 @@
 .button--hidden {
   display: none;
 }
+
+@media (max-width: $tablet-max-width) {
+  .button--callback {
+    font-size: 14px;
+    line-height: 37px;
+    min-width: 156px;
+    height: 40px;
+  }
+
+  .button.button--order,
+  .button.button--consult {
+    font-size: 15px;
+    height: 56px;
+    min-width: 215px;
+  }
+}

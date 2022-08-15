@@ -37,3 +37,17 @@
   margin: 0 auto;
   position: relative;
 }
+
+@media (max-width: $tablet-max-width) {
+  .cupboards-filling__heading {
+    font-size: 36px;
+  }
+
+  .cupboards-filling__description {
+    font-size: 18px;
+  }
+
+  .cupboards-filling__wrapper {
+    padding: 30px 16px;
+  }
+}
