@@ -40,6 +40,7 @@ gulp.task(`server`, function () {
 
   gulp.watch(`source/sass/**/*.{scss,sass}`, gulp.series(`css`));
   gulp.watch(`source/img/icon-*.svg`, gulp.series(`sprite`, `html`, `refresh`));
+  gulp.watch(`source/img/**/*.{png,jpg}`, gulp.series(`images`));
   gulp.watch(`source/*.html`, gulp.series(`html`, `refresh`));
   gulp.watch(`source/js/*.js`, gulp.series(`html`, `copy-js`, `refresh`));
 });
@@ -49,16 +50,17 @@ gulp.task(`refresh`, function (done) {
   done();
 });
 
+const changed = require(`gulp-changed`);
+
 gulp.task(`images`, function () {
   return gulp.src(`source/img/**/*.{png,jpg,svg}`)
+      .pipe(changed(`build/img`))
       .pipe(imagemin([
         imagemin.optipng({optimizationLevel: 3}),
         imagemin.jpegtran({progressive: true}),
         imagemin.svgo()
       ]))
-
       .pipe(gulp.dest(`build/img`));
-
 });
 
 gulp.task(`webp`, function () {

@@ -14,4 +14,11 @@ globals:
   noUiSlider: readonly
 
 extends:
-  "htmlacademy/es6"
+  - "eslint:recommended"
+  - "htmlacademy/es6"
+
+plugins:
+  - "node"
+
+rules:
+  no-console: "off"
