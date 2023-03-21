@@ -56,15 +56,7 @@
 }
 
 @mixin background-supports($path, $ext: "png") {
-  background-image: -webkit-image-set(
-      url("#{$path}.webp") 1x,
-      url("#{$path}.#{$ext}")
-  );
-  background-image: image-set(
-      url("#{$path}.webp") 1x,
-      url("#{$path}.#{$ext}")
-  );
-  background-image: url("#{$path}.#{$ext}");
+  background-image: url("#{$path}.webp"), url("#{$path}.#{$ext}");
 }
 
 .products--wardrobe-white {
