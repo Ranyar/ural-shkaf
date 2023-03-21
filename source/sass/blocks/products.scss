@@ -56,9 +56,11 @@
 }
 
 @function webp-fallback($path, $ext: "png") {
-  @return image(
-      "url(#{$path}.webp) type('image/webp')",
-      "url(#{$path}.#{$ext})"
+  $fallback-path: unquote("url('#{$path}.#{$ext}')");
+
+  @return -webkit-image-set(
+      "url('#{$path}.webp') 1x",
+      $fallback-path
   );
 }
 
@@ -328,7 +330,7 @@
   }
 }
 
-..products--wardrobe-sliding-bedroom {
+.products--wardrobe-sliding-bedroom {
   .products__item:first-child {
     background-image: webp-fallback("./../img/wardrobe-sliding-bedroom/wardrobe-sliding-bedroom-1-1");
   }
