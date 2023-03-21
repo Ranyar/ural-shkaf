@@ -55,678 +55,682 @@
   }
 }
 
-@function webp-fallback($path, $ext: "png") {
-  $fallback-path: unquote("url('#{$path}.#{$ext}')");
-
-  @return -webkit-image-set(
-      "url('#{$path}.webp') 1x",
-      $fallback-path
+@mixin background-supports($path, $ext: "png") {
+  background-image: -webkit-image-set(
+      url("#{$path}.webp") 1x,
+      url("#{$path}.#{$ext}")
   );
+  background-image: image-set(
+      url("#{$path}.webp") 1x,
+      url("#{$path}.#{$ext}")
+  );
+  background-image: url("#{$path}.#{$ext}");
 }
 
 .products--wardrobe-white {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe-white/wardrobe-white-1-1");
+    @include background-supports("./../img/wardrobe-white/wardrobe-white-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe-white/wardrobe-white-1-2");
+    @include background-supports("./../img/wardrobe-white/wardrobe-white-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/wardrobe-white/wardrobe-white-1-3");
+    @include background-supports("./../img/wardrobe-white/wardrobe-white-1-3");
   }
 }
 
 .products--nursery {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/nursery/nursery-1-1");
+    @include background-supports("./../img/nursery/nursery-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/nursery/nursery-1-2");
+    @include background-supports("./../img/nursery/nursery-1-2");
   }
 }
 
 .products--room {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/room/room-1-1");
+    @include background-supports("./../img/room/room-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/room/room-1-2");
+    @include background-supports("./../img/room/room-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/room/room-1-3");
+    @include background-supports("./../img/room/room-1-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/room/room-1-4");
+    @include background-supports("./../img/room/room-1-4");
   }
 }
 
 .products--for-tv {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/for-tv/for-tv-1-1");
+    @include background-supports("./../img/for-tv/for-tv-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/for-tv/for-tv-1-2");
+    @include background-supports("./../img/for-tv/for-tv-1-2");
   }
 }
 
 .products--with-backlit {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/with-backlit/with-backlit-1-1");
+    @include background-supports("./../img/with-backlit/with-backlit-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/with-backlit/with-backlit-1-2");
+    @include background-supports("./../img/with-backlit/with-backlit-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/with-backlit/with-backlit-1-3");
+    @include background-supports("./../img/with-backlit/with-backlit-1-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/with-backlit/with-backlit-1-4");
+    @include background-supports("./../img/with-backlit/with-backlit-1-4");
   }
 }
 
 .products--open-wardrobe {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/open-wardrobe/open-wardrobe-1-1");
+    @include background-supports("./../img/open-wardrobe/open-wardrobe-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/open-wardrobe/open-wardrobe-1-2");
+    @include background-supports("./../img/open-wardrobe/open-wardrobe-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/open-wardrobe/open-wardrobe-1-3");
+    @include background-supports("./../img/open-wardrobe/open-wardrobe-1-3");
   }
 }
 
 .products--open-dressing-room {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/open-dressing-room/open-dressing-room-1-1");
+    @include background-supports("./../img/open-dressing-room/open-dressing-room-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/open-dressing-room/open-dressing-room-1-2");
+    @include background-supports("./../img/open-dressing-room/open-dressing-room-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/open-dressing-room/open-dressing-room-1-3");
+    @include background-supports("./../img/open-dressing-room/open-dressing-room-1-3");
   }
 }
 
 .products--hallway-mdf {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway-mdf/hallway-mdf-1-1");
+    @include background-supports("./../img/hallway-mdf/hallway-mdf-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway-mdf/hallway-mdf-1-2");
+    @include background-supports("./../img/hallway-mdf/hallway-mdf-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/hallway-mdf/hallway-mdf-1-3");
+    @include background-supports("./../img/hallway-mdf/hallway-mdf-1-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/hallway-mdf/hallway-mdf-1-4");
+    @include background-supports("./../img/hallway-mdf/hallway-mdf-1-4");
   }
 }
 
+
 .products--hallway-with-mirror {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway-with-mirror/hallway-with-mirror-1-1");
+    @include background-supports("./../img/hallway-with-mirror/hallway-with-mirror-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway-with-mirror/hallway-with-mirror-1-2");
+    @include background-supports("./../img/hallway-with-mirror/hallway-with-mirror-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/hallway-with-mirror/hallway-with-mirror-1-3");
+    @include background-supports("./../img/hallway-with-mirror/hallway-with-mirror-1-3");
   }
 }
 
 .products--entrance {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/entrance/entrance-1-1");
+    @include background-supports("./../img/entrance/entrance-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/entrance/entrance-1-2");
+    @include background-supports("./../img/entrance/entrance-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/entrance/entrance-1-3");
+    @include background-supports("./../img/entrance/entrance-1-3");
   }
 }
 
 .products--work-zone {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/work-zone/work-zone-1-1");
+    @include background-supports("./../img/work-zone/work-zone-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/work-zone/work-zone-1-2");
+    @include background-supports("./../img/work-zone/work-zone-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/work-zone/work-zone-1-3");
+    @include background-supports("./../img/work-zone/work-zone-1-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/work-zone/work-zone-1-4");
+    @include background-supports("./../img/work-zone/work-zone-1-4");
   }
 }
 
 .products--wardrobe-white-hinged {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe-white-hinged/wardrobe-white-hinged-1-1");
+    @include background-supports("./../img/wardrobe-white-hinged/wardrobe-white-hinged-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe-white-hinged/wardrobe-white-hinged-1-2");
+    @include background-supports("./../img/wardrobe-white-hinged/wardrobe-white-hinged-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/wardrobe-white-hinged/wardrobe-white-hinged-1-3");
+    @include background-supports("./../img/wardrobe-white-hinged/wardrobe-white-hinged-1-3");
   }
 }
 
 .products--wardrobe-entrance {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe-entrance/wardrobe-entrance-1-1");
+    @include background-supports("./../img/wardrobe-entrance/wardrobe-entrance-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe-entrance/wardrobe-entrance-1-2");
+    @include background-supports("./../img/wardrobe-entrance/wardrobe-entrance-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/wardrobe-entrance/wardrobe-entrance-1-3");
+    @include background-supports("./../img/wardrobe-entrance/wardrobe-entrance-1-3");
   }
 }
 
 .products--wardrobe-bedroom {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe-bedroom/wardrobe-bedroom-1-1");
+    @include background-supports("./../img/wardrobe-bedroom/wardrobe-bedroom-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe-bedroom/wardrobe-bedroom-1-2");
+    @include background-supports("./../img/wardrobe-bedroom/wardrobe-bedroom-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/wardrobe-bedroom/wardrobe-bedroom-1-3");
+    @include background-supports("./../img/wardrobe-bedroom/wardrobe-bedroom-1-3");
   }
 }
 
 .products--wardrobe-hinged-with-mirrors {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe-hinged-with-mirrors/wardrobe-hinged-with-mirrors-1-1");
+    @include background-supports("./../img/wardrobe-hinged-with-mirrors/wardrobe-hinged-with-mirrors-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe-hinged-with-mirrors/wardrobe-hinged-with-mirrors-1-2");
+    @include background-supports("./../img/wardrobe-hinged-with-mirrors/wardrobe-hinged-with-mirrors-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/wardrobe-hinged-with-mirrors/wardrobe-hinged-with-mirrors-1-3");
+    @include background-supports("./../img/wardrobe-hinged-with-mirrors/wardrobe-hinged-with-mirrors-1-3");
   }
 }
 
 .products--wardrobe-hinged-with-handles {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe-hinged-with-handles/wardrobe-hinged-with-handles-1-1");
+    @include background-supports("./../img/wardrobe-hinged-with-handles/wardrobe-hinged-with-handles-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe-hinged-with-handles/wardrobe-hinged-with-handles-1-2");
+    @include background-supports("./../img/wardrobe-hinged-with-handles/wardrobe-hinged-with-handles-1-2");
   }
 }
 
 .products--tv-zone {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/tv-zone/tv-zone-1-1");
+    @include background-supports("./../img/tv-zone/tv-zone-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/tv-zone/tv-zone-1-2");
+    @include background-supports("./../img/tv-zone/tv-zone-1-2");
   }
 }
 
 .products--living-room {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/living-room/living-room-1-1");
+    @include background-supports("./../img/living-room/living-room-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/living-room/living-room-1-2");
+    @include background-supports("./../img/living-room/living-room-1-2");
   }
 }
 
 .products--wardrobe-sliding-entrance {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe-sliding-entrance/wardrobe-sliding-entrance-1-1");
+    @include background-supports("./../img/wardrobe-sliding-entrance/wardrobe-sliding-entrance-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe-sliding-entrance/wardrobe-sliding-entrance-1-2");
+    @include background-supports("./../img/wardrobe-sliding-entrance/wardrobe-sliding-entrance-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/wardrobe-sliding-entrance/wardrobe-sliding-entrance-1-3");
+    @include background-supports("./../img/wardrobe-sliding-entrance/wardrobe-sliding-entrance-1-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/wardrobe-sliding-entrance/wardrobe-sliding-entrance-1-4");
+    @include background-supports("./../img/wardrobe-sliding-entrance/wardrobe-sliding-entrance-1-4");
   }
 }
 
 .products--wardrobe-sliding-bedroom {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe-sliding-bedroom/wardrobe-sliding-bedroom-1-1");
+    @include background-supports("./../img/wardrobe-sliding-bedroom/wardrobe-sliding-bedroom-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe-sliding-bedroom/wardrobe-sliding-bedroom-1-2");
+    @include background-supports("./../img/wardrobe-sliding-bedroom/wardrobe-sliding-bedroom-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/wardrobe-sliding-bedroom/wardrobe-sliding-bedroom-1-3");
+    @include background-supports("./../img/wardrobe-sliding-bedroom/wardrobe-sliding-bedroom-1-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/wardrobe-sliding-bedroom/wardrobe-sliding-bedroom-1-4");
+    @include background-supports("./../img/wardrobe-sliding-bedroom/wardrobe-sliding-bedroom-1-4");
   }
 }
 
 .products--wardrobe-with-white-foil {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe-with-white-foil/wardrobe-with-white-foil-1-1");
+    @include background-supports("./../img/wardrobe-with-white-foil/wardrobe-with-white-foil-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe-with-white-foil/wardrobe-with-white-foil-1-2");
+    @include background-supports("./../img/wardrobe-with-white-foil/wardrobe-with-white-foil-1-2");
   }
 }
 
 .products--wardrobe-with-rhombuses {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe-with-rhombuses/wardrobe-with-rhombuses-1-1");
+    @include background-supports("./../img/wardrobe-with-rhombuses/wardrobe-with-rhombuses-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe-with-rhombuses/wardrobe-with-rhombuses-1-2");
+    @include background-supports("./../img/wardrobe-with-rhombuses/wardrobe-with-rhombuses-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/wardrobe-with-rhombuses/wardrobe-with-rhombuses-1-3");
+    @include background-supports("./../img/wardrobe-with-rhombuses/wardrobe-with-rhombuses-1-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/wardrobe-with-rhombuses/wardrobe-with-rhombuses-1-4");
+    @include background-supports("./../img/wardrobe-with-rhombuses/wardrobe-with-rhombuses-1-4");
   }
 }
 
 .products--wardrobe-balcony {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe-balcony/wardrobe-balcony-1-1");
+    @include background-supports("./../img/wardrobe-balcony/wardrobe-balcony-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe-balcony/wardrobe-balcony-1-2");
+    @include background-supports("./../img/wardrobe-balcony/wardrobe-balcony-1-2");
   }
 }
 
 .products--dresser-white {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/dresser-white");
+    @include background-supports("./../img/dresser-white");
   }
 }
 
 .products--bedroom-1 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/bedroom/bedroom-1-1");
+    @include background-supports("./../img/bedroom/bedroom-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/bedroom/bedroom-1-2");
+    @include background-supports("./../img/bedroom/bedroom-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/bedroom/bedroom-1-3");
+    @include background-supports("./../img/bedroom/bedroom-1-3");
   }
 }
 
 .products--bedroom-2 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/bedroom/bedroom-2-1");
+    @include background-supports("./../img/bedroom/bedroom-2-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/bedroom/bedroom-2-2");
+    @include background-supports("./../img/bedroom/bedroom-2-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/bedroom/bedroom-2-3");
+    @include background-supports("./../img/bedroom/bedroom-2-3");
   }
 }
 
 .products--bedroom-3 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/bedroom/bedroom-3-1");
+    @include background-supports("./../img/bedroom/bedroom-3-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/bedroom/bedroom-3-2");
+    @include background-supports("./../img/bedroom/bedroom-3-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/bedroom/bedroom-3-3");
+    @include background-supports("./../img/bedroom/bedroom-3-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/bedroom/bedroom-3-4");
+    @include background-supports("./../img/bedroom/bedroom-3-4");
   }
 }
 
 .products--bedroom-4 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/bedroom/bedroom-4");
+    @include background-supports("./../img/bedroom/bedroom-4");
   }
 }
 
 .products--bedroom-5 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/bedroom/bedroom-5");
+    @include background-supports("./../img/bedroom/bedroom-5");
   }
 }
 
 .products--bathroom-1 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/bathroom/bathroom-1-1");
+    @include background-supports("./../img/bathroom/bathroom-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/bathroom/bathroom-1-2");
+    @include background-supports("./../img/bathroom/bathroom-1-2");
   }
 }
 
 .products--office-1 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/office/office-1-1");
+    @include background-supports("./../img/office/office-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/office/office-1-2");
+    @include background-supports("./../img/office/office-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/office/office-1-3");
+    @include background-supports("./../img/office/office-1-3");
   }
 }
 
 .products--lounge-1 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/lounge/lounge-1-1");
+    @include background-supports("./../img/lounge/lounge-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/lounge/lounge-1-2");
+    @include background-supports("./../img/lounge/lounge-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/lounge/lounge-1-3");
+    @include background-supports("./../img/lounge/lounge-1-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/lounge/lounge-1-4");
+    @include background-supports("./../img/lounge/lounge-1-4");
   }
 }
 
 .products--lounge-2 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/lounge/lounge-2-1");
+    @include background-supports("./../img/lounge/lounge-2-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/lounge/lounge-2-2");
+    @include background-supports("./../img/lounge/lounge-2-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/lounge/lounge-2-3");
+    @include background-supports("./../img/lounge/lounge-2-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/lounge/lounge-2-4");
+    @include background-supports("./../img/lounge/lounge-2-4");
   }
 }
 
 .products--lounge-3 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/lounge/lounge-3-1");
+    @include background-supports("./../img/lounge/lounge-3-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/lounge/lounge-3-2");
+    @include background-supports("./../img/lounge/lounge-3-2");
   }
 }
 
 .products--lounge-4 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/lounge/lounge-4-1");
+    @include background-supports("./../img/lounge/lounge-4-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/lounge/lounge-4-2");
+    @include background-supports("./../img/lounge/lounge-4-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/lounge/lounge-4-3");
+    @include background-supports("./../img/lounge/lounge-4-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/lounge/lounge-4-4");
+    @include background-supports("./../img/lounge/lounge-4-4");
   }
 }
 
 .products--wardrobe-1 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe/wardrobe-1-1");
+    @include background-supports("./../img/wardrobe/wardrobe-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe/wardrobe-1-2");
+    @include background-supports("./../img/wardrobe/wardrobe-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/wardrobe/wardrobe-1-3");
+    @include background-supports("./../img/wardrobe/wardrobe-1-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/wardrobe/wardrobe-1-4");
+    @include background-supports("./../img/wardrobe/wardrobe-1-4");
   }
 }
 
 .products--wardrobe-2 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/wardrobe/wardrobe-2-1");
+    @include background-supports("./../img/wardrobe/wardrobe-2-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/wardrobe/wardrobe-2-2");
+    @include background-supports("./../img/wardrobe/wardrobe-2-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/wardrobe/wardrobe-2-3");
+    @include background-supports("./../img/wardrobe/wardrobe-2-3");
   }
 }
 
 .products--hallway-1 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-1-1");
+    @include background-supports("./../img/hallway/hallway-1-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway/hallway-1-2");
+    @include background-supports("./../img/hallway/hallway-1-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/hallway/hallway-1-3");
+    @include background-supports("./../img/hallway/hallway-1-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/hallway/hallway-1-4");
+    @include background-supports("./../img/hallway/hallway-1-4");
   }
 }
 
 .products--hallway-2 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-2-1");
+    @include background-supports("./../img/hallway/hallway-2-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway/hallway-2-2");
+    @include background-supports("./../img/hallway/hallway-2-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/hallway/hallway-2-3");
+    @include background-supports("./../img/hallway/hallway-2-3");
   }
 }
 
 .products--hallway-3 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-3-1");
+    @include background-supports("./../img/hallway/hallway-3-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway/hallway-3-2");
+    @include background-supports("./../img/hallway/hallway-3-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/hallway/hallway-3-3");
+    @include background-supports("./../img/hallway/hallway-3-3");
   }
 }
 
 .products--hallway-4 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-4-1");
+    @include background-supports("./../img/hallway/hallway-4-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway/hallway-4-2");
+    @include background-supports("./../img/hallway/hallway-4-2");
   }
 }
 
 .products--hallway-5 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-5-1");
+    @include background-supports("./../img/hallway/hallway-5-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway/hallway-5-2");
+    @include background-supports("./../img/hallway/hallway-5-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/hallway/hallway-5-3");
+    @include background-supports("./../img/hallway/hallway-5-3");
   }
 }
 
 .products--hallway-6 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-6-1");
+    @include background-supports("./../img/hallway/hallway-6-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway/hallway-6-2");
+    @include background-supports("./../img/hallway/hallway-6-2");
   }
 }
 
 .products--hallway-7 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-7-1");
+    @include background-supports("./../img/hallway/hallway-7-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway/hallway-7-2");
+    @include background-supports("./../img/hallway/hallway-7-2");
   }
 }
 
 .products--hallway-8 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-8-1");
+    @include background-supports("./../img/hallway/hallway-8-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway/hallway-8-2");
+    @include background-supports("./../img/hallway/hallway-8-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/hallway/hallway-8-3");
+    @include background-supports("./../img/hallway/hallway-8-3");
   }
 }
 
 .products--hallway-9 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-9-1");
+    @include background-supports("./../img/hallway/hallway-9-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway/hallway-9-2");
+    @include background-supports("./../img/hallway/hallway-9-2");
   }
 
   .products__item:nth-child(3) {
-    background-image: webp-fallback("./../img/hallway/hallway-9-3");
+    @include background-supports("./../img/hallway/hallway-9-3");
   }
 
   .products__item:nth-child(4) {
-    background-image: webp-fallback("./../img/hallway/hallway-9-4");
+    @include background-supports("./../img/hallway/hallway-9-4");
   }
 }
 
 .products--hallway-10 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-10-1");
+    @include background-supports("./../img/hallway/hallway-10-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway/hallway-10-2");
+    @include background-supports("./../img/hallway/hallway-10-2");
   }
 }
 
 .products--hallway-11 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-11-1");
+    @include background-supports("./../img/hallway/hallway-11-1");
   }
 
   .products__item:nth-child(2) {
-    background-image: webp-fallback("./../img/hallway/hallway-11-2");
+    @include background-supports("./../img/hallway/hallway-11-2");
   }
 }
 
 .products--hallway-12 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-12-1");
+    @include background-supports("./../img/hallway/hallway-12-1");
   }
 }
 
 .products--hallway-13 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-13-1");
+    @include background-supports("./../img/hallway/hallway-13-1");
   }
 }
 
 .products--hallway-14 {
   .products__item:first-child {
-    background-image: webp-fallback("./../img/hallway/hallway-14-1");
+    @include background-supports("./../img/hallway/hallway-14-1");
   }
 }
 
