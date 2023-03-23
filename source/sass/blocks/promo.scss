@@ -1,3 +1,11 @@
+@mixin background-supports($path, $ext: "png") {
+  background-image: url("#{$path}.#{$ext}");
+
+  @supports (background-image: url("#{$path}.webp")) {
+    background-image: url("#{$path}.webp");
+  }
+}
+
 .promo {
   position: relative;
   padding: 158px 40px 40px 40px;
@@ -63,7 +71,7 @@
 .promo__call-to-actions .button--yellow:before {
   position: absolute;
   content: '';
-  background-image: url("./../img/arr-garanty.png");
+  @include background-supports("./../img/arr-garanty");
   width: 74px;
   height: 56px;
   bottom: -83px;
@@ -89,7 +97,7 @@
 .promo__work-area:before {
   position: absolute;
   content: '';
-  background-image: url("./../img/pin.png");
+  @include background-supports("./../img/pin");
   width: 23px;
   height: 32px;
   top: 13px;

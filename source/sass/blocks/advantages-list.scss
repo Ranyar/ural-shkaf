@@ -1,3 +1,11 @@
+@mixin background-supports($path, $ext: "png") {
+  background-image: url("#{$path}.#{$ext}");
+
+  @supports (background-image: url("#{$path}.webp")) {
+    background-image: url("#{$path}.webp");
+  }
+}
+
 .advantages-list {
   display: flex;
   list-style: none;
@@ -14,7 +22,7 @@
   &:before {
     position: absolute;
     content: '';
-    background-image: url("./../img/done.png");
+    @include background-supports("./../img/done");
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;

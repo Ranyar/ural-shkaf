@@ -1,3 +1,13 @@
+@mixin background-supports($path, $ext: "png") {
+  background-image: url("#{$path}.#{$ext}");
+
+  @supports (background-image: url("#{$path}.webp")) {
+    background-image: url("#{$path}.webp");
+  }
+}
+
+// @include background-supports
+
 .products {
   width: 365px;
 }
@@ -52,14 +62,6 @@
     margin-bottom: 54px;
     margin-left: 33px;
     max-width: 149px;
-  }
-}
-
-@mixin background-supports($path, $ext: "png") {
-  background-image: url("#{$path}.#{$ext}");
-
-  @supports (background-image: url("#{$path}.webp")) {
-    background-image: url("#{$path}.webp");
   }
 }
 

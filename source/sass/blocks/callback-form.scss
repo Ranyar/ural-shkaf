@@ -1,3 +1,11 @@
+@mixin background-supports($path, $ext: "png") {
+  background-image: url("#{$path}.#{$ext}");
+
+  @supports (background-image: url("#{$path}.webp")) {
+    background-image: url("#{$path}.webp");
+  }
+}
+
 .callback-form {
   position: relative;
   display: flex;
@@ -38,7 +46,7 @@
   &::before {
     position: absolute;
     content: '';
-    background-image: url("./../img/form-ellipse.png");
+    @include background-supports("./../img/form-ellipse");
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;

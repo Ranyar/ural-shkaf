@@ -1,5 +1,13 @@
+@mixin background-supports($path, $ext: "jpg") {
+  background-image: url("#{$path}.#{$ext}");
+
+  @supports (background-image: url("#{$path}.webp")) {
+    background-image: url("#{$path}.webp");
+  }
+}
+
 .page-header {
-  background-image: url('./../img/bg1.jpg');
+  @include background-supports('./../img/bg1');
   background-size: cover;
   background-position: top center;
 }

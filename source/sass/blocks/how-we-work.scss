@@ -1,3 +1,11 @@
+@mixin background-supports($path, $ext: "png") {
+  background-image: url("#{$path}.#{$ext}");
+
+  @supports (background-image: url("#{$path}.webp")) {
+    background-image: url("#{$path}.webp");
+  }
+}
+
 .how-we-work__wrapper {
   max-width: 1240px;
   margin: 0 auto;
@@ -9,7 +17,7 @@
     content: '';
     top: 200px;
     left: -17%;
-    background-image: url("./../img/how-we-work-bg.png");
+    @include background-supports("./../img/how-we-work-bg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 542px;

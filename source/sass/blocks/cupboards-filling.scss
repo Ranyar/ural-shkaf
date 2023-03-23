@@ -1,3 +1,11 @@
+@mixin background-supports($path, $ext: "jpg") {
+  background-image: url("#{$path}.#{$ext}");
+
+  @supports (background-image: url("#{$path}.webp")) {
+    background-image: url("#{$path}.webp");
+  }
+}
+
 .cupboards-filling {
   position: relative;
 }
@@ -5,7 +13,7 @@
 .cupboards-filling::before {
   position: absolute;
   content: '';
-  background-image: url("./../img/r1.jpg");
+  @include background-supports("./../img/r1");
   background-repeat: no-repeat;
   background-size: cover;
   top: 45px;

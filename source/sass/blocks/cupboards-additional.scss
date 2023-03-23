@@ -1,3 +1,11 @@
+@mixin background-supports($path, $ext: "png") {
+  background-image: url("#{$path}.#{$ext}");
+
+  @supports (background-image: url("#{$path}.webp")) {
+    background-image: url("#{$path}.webp");
+  }
+}
+
 .cupboards-additional {
   background: linear-gradient(to top, rgba($basic-white,1) 0, rgba($basic-white,1) 150px, rgba($dark-background,1) 150px);
 }
@@ -37,7 +45,7 @@
   &:before {
     position: absolute;
     content: '';
-    background-image: url("./../img/blockquote-left.png");
+    @include background-supports("./../img/blockquote-left");
     background-repeat: no-repeat;
     background-position: left top;
     width: 51px;
@@ -49,7 +57,7 @@
   &:after {
     position: absolute;
     content: '';
-    background-image: url("./../img/blockquote-right.png");
+    @include background-supports("./../img/blockquote-right");
     background-repeat: no-repeat;
     background-position: right bottom;
     width: 51px;
