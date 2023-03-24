@@ -5,9 +5,9 @@ const swiper = new Swiper(`.swiper--portfolio`, {
   loop: true,
   slidesPerGroup: 3,
   slidesPerView: 3,
-  centeredSlides: false,
+  centeredSlides: true,
   spaceBetween: 30,
-  centeredSlidesBounds: true,
+
 
   pagination: {
     el: `.swiper-pagination--portfolio`,
@@ -19,17 +19,23 @@ const swiper = new Swiper(`.swiper--portfolio`, {
   },
 
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
+    1024: {
+      slidesPerView: 'auto',
+      slidesPerGroup: 3,
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 'auto',
       slidesPerGroup: 2,
+      spaceBetween: 30,
     },
-    1024: {
-      slidesPerView: 3,
-      slidesPerGroup: 3,
+    480: {
+      slidesPerView: 'auto',
+      slidesPerGroup: 1,
+    },
+    320: {
+      slidesPerView: 'auto',
+      slidesPerGroup: 1,
+      spaceBetween: 15,
     },
   },
 });
