@@ -19,6 +19,10 @@
   margin: 0;
 }
 
+.portfolio__item {
+  flex-shrink: unset!important;
+}
+
 .portfolio .swiper-pagination-bullet-active {
   background: $basic-black;
 }
@@ -59,7 +63,7 @@
   }
 
   .products__list .products__item.products__item--first {
-    width: 298px;
+    //width: 298px;
     height: 503px;
   }
 
@@ -80,5 +84,9 @@
   .portfolio__heading {
     font-size: 20px;
     max-width: 180px;
+  }
+
+  .portfolio__item {
+    max-width: 298px;
   }
 }

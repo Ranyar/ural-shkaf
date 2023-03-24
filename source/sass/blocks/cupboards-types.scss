@@ -19,7 +19,7 @@
   position: absolute;
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   width: 100%;
   padding: 0 31px 0 39px;
   bottom: 50px;
@@ -142,4 +142,8 @@
      margin: 0 0 20px 0;
    }
  }
+
+  .cupboards-types__count {
+    align-items: flex-start;
+  }
 }
